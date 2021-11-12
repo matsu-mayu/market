@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
             [
                 'id' => 4,
                 'name' => 'testuser2',
+                'email' => 'testuser2@test.com',
                 'password' => 'test1111',
             ],
         ];
