@@ -37,6 +37,16 @@
                     </select>      
                 </label>          
         </div>
+        <div>
+                <label>
+                  シャイプ：
+                    <select name="shape_id">
+                        @foreach($shapes as $shape)
+                            <option value="{{ $shape->id }}">{{ $shape->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
       
       <input type="submit" value="出品">
   </form>

@@ -28,6 +28,7 @@ class ItemEditRequest extends FormRequest
             'description' => ['required', 'max:1000'],
             'price' => ['required', 'integer', 'min:0'],
             'category_id' => ['exists:categories,id'],
+            'shape_id' => ['exists:shapes,id'],
         ];
     }
 }

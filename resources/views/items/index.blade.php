@@ -23,6 +23,9 @@
             カテゴリ：{{ $item->category->name }} （{{ $item->created_at }}  {{ $item->description }}
           </div>
           <div>
+            シャイプ：{{ $item->shape->name }} （{{ $item->created_at }}  {{ $item->description }}
+          </div>
+          <div>
             {{ $item->isSold() ? '売り切れ' : '販売中' }}
           </div>
         </li>

@@ -24,6 +24,12 @@
           {{ $item->category->name }}
         </dd>
       <dt>
+        シャイプ
+      </dt>
+        <dd>
+          {{ $item->shape->name }}
+        </dd>
+      <dt>
         価格
       </dt>
         <dd>
