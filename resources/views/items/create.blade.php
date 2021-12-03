@@ -34,7 +34,7 @@
           </label>
       </div><div>
           <label>
-            シャイプ：
+            シェイプ：
               <select name="shape_id">
                 @foreach($shapes as $shape)
                   <option value="{{ $shape->id }}">{{ $shape->name }}</option>

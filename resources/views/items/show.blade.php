@@ -24,7 +24,7 @@
           {{ $item->category->name }}
         </dd>
       <dt>
-        シャイプ
+        シェイプ
       </dt>
         <dd>
           {{ $item->shape->name }}
