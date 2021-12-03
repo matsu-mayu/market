@@ -10,6 +10,7 @@ use App\Http\Requests\ItemImageRequest;
 use App\Like;
 use App\Order;
 use App\Category;
+use App\Shape;
 use App\Services\FileUploadService;
 
 
@@ -32,9 +33,11 @@ class ItemController extends Controller
     public function create()
     {
         $categories = Category::all();
+        $shapes = Shape::all();
         return view('items.create', [
             'title' => '商品を出品',
             'categories' => $categories,
+            'shapes' => $shapes,
         ]);
     }
 
@@ -51,6 +54,7 @@ class ItemController extends Controller
             'image' => $path,
             'name' => $request->name,
             'category_id' => $request->category_id,
+            'shape_id' => $request->shape_id,
             'description' => $request->description,
             'price' => $request->price,
         ]);
@@ -72,18 +76,20 @@ class ItemController extends Controller
         $item = Item::find($id);
         
         $categories = Category::all();
+        $shapes = Shape::all();
         
         return view('items.edit', [
             'title' => '商品情報の編集',
             'item' => $item,
             'categories' => $categories,
+            'shapes' => $shapes,
         ]);
     }
 
     public function update(ItemEditRequest $request, $id)
     {
         $item = Item::find($id);
-        $item->update($request->only(['name', 'description', 'price', 'category']));
+        $item->update($request->only(['name', 'description', 'price', 'category', 'shape']));
         session()->flash('success', '商品を編集しました');
         return redirect()->route('items.show', $id);
     }
