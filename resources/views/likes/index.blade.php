@@ -18,7 +18,11 @@
           {{ $like_item->description }}
         </div>
         <div>
-          シャイプ：{{ $like_item->shape->name }} {{ $like_item->created_at }}
+          シェイプ：{{ $like_item->shape->name }} {{ $like_item->created_at }}
+          {{ $like_item->description }}
+        </div>
+        <div>
+          リムタイプ：{{ $like_item->rim->name }} {{ $like_item->created_at }}
           {{ $like_item->description }}
         </div>
         <div>

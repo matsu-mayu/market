@@ -32,12 +32,23 @@
                 @endforeach
               </select>    
           </label>
-      </div><div>
+      </div>
+      <div>
           <label>
             シェイプ：
               <select name="shape_id">
                 @foreach($shapes as $shape)
                   <option value="{{ $shape->id }}">{{ $shape->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+      </div>
+      <div>
+          <label>
+            リムタイプ：
+              <select name="rim_id">
+                @foreach($rims as $rim)
+                  <option value="{{ $rim->id }}">{{ $rim->name }}</option>
                 @endforeach
               </select>    
           </label>

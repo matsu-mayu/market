@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     protected $fillable = [
-        'user_id', 'item_id', 'name', 'description', 'price', 'category_id', 'shape_id', 'image'
+        'user_id', 'item_id', 'name', 'description', 'price', 'category_id', 'shape_id', 'rim_id', 'image'
     ];
 
     public function user() {
@@ -34,6 +34,10 @@ class Item extends Model
     
     public function shape() {
         return $this->belongsTo('App\Shape');
+    }
+    
+    public function rim() {
+        return $this->belongsTo('App\Rim');
     }
     
     public function orders() {
