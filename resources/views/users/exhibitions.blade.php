@@ -20,6 +20,9 @@
                     カテゴリー：{{ $item->category->name }}({{ $item->created_at }})
                 </div>
                 <div>
+                    性別：{{ $item->gender->name }}({{ $item->created_at }})
+                </div>
+                <div>
                     シェイプ：{{ $item->shape->name }}({{ $item->created_at }})
                 </div>
                 <div>

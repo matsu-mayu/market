@@ -33,6 +33,12 @@
           {{ $item->rim->name }}
         </dd>
       <dt>
+        性別
+      </dt>
+        <dd>
+          {{ $item->gender->name }}
+        </dd>
+      <dt>
         価格
       </dt>
         <dd>

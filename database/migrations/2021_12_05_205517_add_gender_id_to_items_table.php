@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddRimIdToItemsTable extends Migration
+class AddGenderIdToItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddRimIdToItemsTable extends Migration
     public function up()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->unsignedBigInteger('rim_id')->after('shape_id');
+            $table->unsignedBigInteger('gender_id')->after('rim_id');
         });
     }
 
@@ -26,7 +26,7 @@ class AddRimIdToItemsTable extends Migration
     public function down()
     {
         Schema::table('items', function (Blueprint $table) {
-            $table->dropColumn('rim_id');
+            $table->dropColumn('gender_id'); 
         });
     }
 }

@@ -24,6 +24,12 @@
           {{ $item->category->name }}
         </dd>
       <dt>
+        性別
+      </dt>
+        <dd>
+          {{ $item->gender->name }}
+        </dd>
+      <dt>
         シェイプ
       </dt>
         <dd>

@@ -23,6 +23,9 @@
             カテゴリ：{{ $item->category->name }} （{{ $item->created_at }}  {{ $item->description }}
           </div>
           <div>
+            性別：{{ $item->gender->name }} （{{ $item->created_at }}  {{ $item->description }}
+          </div>
+          <div>
             シェイプ：{{ $item->shape->name }} （{{ $item->created_at }}  {{ $item->description }}
           </div>
           <div>
