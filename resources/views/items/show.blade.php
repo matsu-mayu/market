@@ -30,6 +30,12 @@
           {{ $item->shape->name }}
         </dd>
       <dt>
+        リムタイプ
+      </dt>
+        <dd>
+          {{ $item->rim->name }}
+        </dd>
+      <dt>
         価格
       </dt>
         <dd>

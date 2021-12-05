@@ -20,11 +20,17 @@
         <dd>
           {{ $item->category->name }}
         </dd>
-        <dt>
+      <dt>
         シェイプ
       </dt>
         <dd>
           {{ $item->shape->name }}
+        </dd>
+      <dt>
+        リムタイプ
+      </dt>
+        <dd>
+          {{ $item->rim->name }}
         </dd>
       <dt>
         価格
