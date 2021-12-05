@@ -39,6 +39,16 @@
         </div>
         <div>
                 <label>
+                  性別：
+                    <select name="gender_id">
+                        @foreach($genders as $gender)
+                            <option value="{{ $gender->id }}">{{ $gender->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
+        <div>
+                <label>
                   シェイプ：
                     <select name="shape_id">
                         @foreach($shapes as $shape)
@@ -57,6 +67,7 @@
                     </select>      
                 </label>          
         </div>
+        
       
       <input type="submit" value="出品">
   </form>

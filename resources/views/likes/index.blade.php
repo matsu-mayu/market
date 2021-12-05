@@ -18,6 +18,10 @@
           {{ $like_item->description }}
         </div>
         <div>
+          性別：{{ $like_item->gender->name }} {{ $like_item->created_at }}
+          {{ $like_item->description }}
+        </div>
+        <div>
           シェイプ：{{ $like_item->shape->name }} {{ $like_item->created_at }}
           {{ $like_item->description }}
         </div>

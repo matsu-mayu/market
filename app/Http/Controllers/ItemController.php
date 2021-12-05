@@ -12,6 +12,7 @@ use App\Order;
 use App\Category;
 use App\Shape;
 use App\Rim;
+use App\Gender;
 use App\Services\FileUploadService;
 
 
@@ -36,11 +37,13 @@ class ItemController extends Controller
         $categories = Category::all();
         $shapes = Shape::all();
         $rims = Rim::all();
+        $genders = Gender::all();
         return view('items.create', [
             'title' => '商品を出品',
             'categories' => $categories,
             'shapes' => $shapes,
             'rims' => $rims,
+            'genders' => $genders,
         ]);
     }
 
@@ -59,6 +62,7 @@ class ItemController extends Controller
             'category_id' => $request->category_id,
             'shape_id' => $request->shape_id,
             'rim_id' => $request->rim_id,
+            'gender_id' => $request->gender_id,
             'description' => $request->description,
             'price' => $request->price,
         ]);
@@ -82,6 +86,7 @@ class ItemController extends Controller
         $categories = Category::all();
         $shapes = Shape::all();
         $rims = Rim::all();
+        $genders = Gender::all();
         
         return view('items.edit', [
             'title' => '商品情報の編集',
@@ -89,13 +94,14 @@ class ItemController extends Controller
             'categories' => $categories,
             'shapes' => $shapes,
             'rims' => $rims,
+            'genders' => $genders,
         ]);
     }
 
     public function update(ItemEditRequest $request, $id)
     {
         $item = Item::find($id);
-        $item->update($request->only(['name', 'description', 'price', 'category', 'shape', 'rim']));
+        $item->update($request->only(['name', 'description', 'price', 'category', 'shape', 'rim', 'gender']));
         session()->flash('success', '商品を編集しました');
         return redirect()->route('items.show', $id);
     }
