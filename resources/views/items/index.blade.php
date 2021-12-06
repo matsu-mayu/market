@@ -35,6 +35,9 @@
             サイズ：{{ $item->size->name }} （{{ $item->created_at }}  {{ $item->description }}
           </div>
           <div>
+            カラー：{{ $item->color->name }} （{{ $item->created_at }}  {{ $item->description }}
+          </div>
+          <div>
             {{ $item->isSold() ? '売り切れ' : '販売中' }}
           </div>
         </li>

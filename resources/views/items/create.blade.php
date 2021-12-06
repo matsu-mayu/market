@@ -74,6 +74,16 @@
           </label>
       </div>
       <div>
+          <label>
+            カラー：
+              <select name="color_id">
+                @foreach($colors as $color)
+                  <option value="{{ $color->id }}">{{ $color->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+      </div>
+      <div>
         <label>
           画像を選択：
           <input type="file" name="image">

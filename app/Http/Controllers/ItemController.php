@@ -14,6 +14,7 @@ use App\Shape;
 use App\Rim;
 use App\Gender;
 use App\Size;
+use App\Color;
 use App\Services\FileUploadService;
 
 
@@ -40,6 +41,7 @@ class ItemController extends Controller
         $rims = Rim::all();
         $genders = Gender::all();
         $sizes = Size::all();
+        $colors = Color::all();
         
         return view('items.create', [
             'title' => '商品を出品',
@@ -48,6 +50,7 @@ class ItemController extends Controller
             'rims' => $rims,
             'genders' => $genders,
             'sizes' => $sizes,
+            'colors' => $colors,
         ]);
     }
 
@@ -68,6 +71,7 @@ class ItemController extends Controller
             'rim_id' => $request->rim_id,
             'gender_id' => $request->gender_id,
             'size_id' => $request->size_id,
+            'color_id' => $request->color_id,
             'description' => $request->description,
             'price' => $request->price,
         ]);
@@ -93,6 +97,7 @@ class ItemController extends Controller
         $rims = Rim::all();
         $genders = Gender::all();
         $sizes = Size::all();
+        $colors = Color::all();
         
         return view('items.edit', [
             'title' => '商品情報の編集',
@@ -102,6 +107,7 @@ class ItemController extends Controller
             'rims' => $rims,
             'genders' => $genders,
             'sizes' => $sizes,
+            'colors' => $colors,
         ]);
     }
 
