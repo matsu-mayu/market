@@ -32,6 +32,7 @@ class ItemRequest extends FormRequest
             'rim_id' => ['exists:rims,id'],
             'gender_id' => ['exists:genders,id'],
             'size_id' => ['exists:sizes,id'],
+            'color_id' => ['exists:colors,id'],
             'image' => [
                 'required',
                 'file',

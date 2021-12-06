@@ -31,6 +31,9 @@
                 <div>
                     サイズ：{{ $item->size->name }}({{ $item->created_at }})
                 </div>
+                <div>
+                    カラー：{{ $item->color->name }}({{ $item->created_at }})
+                </div>
     
                 [<a href="{{ route('items.edit', $item) }}">編集</a>]
                 [<a href="{{ route('items.edit_image', $item) }}">画像を変更</a>]

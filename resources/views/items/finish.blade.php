@@ -48,6 +48,12 @@
           {{ $item->size->name }}
         </dd>
       <dt>
+        カラー
+      </dt>
+        <dd>
+          {{ $item->color->name }}
+        </dd>
+      <dt>
         価格
       </dt>
         <dd>

@@ -77,6 +77,16 @@
                     </select>      
                 </label>          
         </div>
+        <div>
+                <label>
+                  カラー：
+                    <select name="color_id">
+                        @foreach($colors as $color)
+                            <option value="{{ $color->id }}">{{ $color->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
         
       
       <input type="submit" value="出品">
