@@ -63,7 +63,16 @@
               </select>    
           </label>
       </div>
-      
+      <div>
+          <label>
+            サイズ：
+              <select name="size_id">
+                @foreach($sizes as $size)
+                  <option value="{{ $size->id }}">{{ $size->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+      </div>
       <div>
         <label>
           画像を選択：
