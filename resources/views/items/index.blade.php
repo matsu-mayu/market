@@ -32,6 +32,9 @@
             リムタイプ：{{ $item->rim->name }} （{{ $item->created_at }}  {{ $item->description }}
           </div>
           <div>
+            サイズ：{{ $item->size->name }} （{{ $item->created_at }}  {{ $item->description }}
+          </div>
+          <div>
             {{ $item->isSold() ? '売り切れ' : '販売中' }}
           </div>
         </li>

@@ -42,6 +42,12 @@
           {{ $item->rim->name }}
         </dd>
       <dt>
+        サイズ
+      </dt>
+        <dd>
+          {{ $item->size->name }}
+        </dd>
+      <dt>
         価格
       </dt>
         <dd>

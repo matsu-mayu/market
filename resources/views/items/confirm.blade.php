@@ -21,6 +21,12 @@
           {{ $item->category->name }}
         </dd>
       <dt>
+        性別
+      </dt>
+        <dd>
+          {{ $item->gender->name }}
+        </dd>
+      <dt>
         シェイプ
       </dt>
         <dd>
@@ -33,10 +39,10 @@
           {{ $item->rim->name }}
         </dd>
       <dt>
-        性別
+        サイズ
       </dt>
         <dd>
-          {{ $item->gender->name }}
+          {{ $item->size->name }}
         </dd>
       <dt>
         価格

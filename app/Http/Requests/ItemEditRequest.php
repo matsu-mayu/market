@@ -31,6 +31,7 @@ class ItemEditRequest extends FormRequest
             'shape_id' => ['exists:shapes,id'],
             'rim_id' => ['exists:rims,id'],
             'gender_id' => ['exists:genders,id'],
+            'size_id' => ['exists:sizes,id'],
         ];
     }
 }

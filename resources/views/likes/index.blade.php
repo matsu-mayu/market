@@ -30,6 +30,10 @@
           {{ $like_item->description }}
         </div>
         <div>
+          サイズ：{{ $like_item->size->name }} {{ $like_item->created_at }}
+          {{ $like_item->description }}
+        </div>
+        <div>
           {{ $like_item->isSold() ? '売り切れ' : '販売中' }}
         </div>
     @empty

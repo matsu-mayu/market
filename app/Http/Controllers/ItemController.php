@@ -13,6 +13,7 @@ use App\Category;
 use App\Shape;
 use App\Rim;
 use App\Gender;
+use App\Size;
 use App\Services\FileUploadService;
 
 
@@ -38,12 +39,15 @@ class ItemController extends Controller
         $shapes = Shape::all();
         $rims = Rim::all();
         $genders = Gender::all();
+        $sizes = Size::all();
+        
         return view('items.create', [
             'title' => '商品を出品',
             'categories' => $categories,
             'shapes' => $shapes,
             'rims' => $rims,
             'genders' => $genders,
+            'sizes' => $sizes,
         ]);
     }
 
@@ -63,6 +67,7 @@ class ItemController extends Controller
             'shape_id' => $request->shape_id,
             'rim_id' => $request->rim_id,
             'gender_id' => $request->gender_id,
+            'size_id' => $request->size_id,
             'description' => $request->description,
             'price' => $request->price,
         ]);
@@ -87,6 +92,7 @@ class ItemController extends Controller
         $shapes = Shape::all();
         $rims = Rim::all();
         $genders = Gender::all();
+        $sizes = Size::all();
         
         return view('items.edit', [
             'title' => '商品情報の編集',
@@ -95,6 +101,7 @@ class ItemController extends Controller
             'shapes' => $shapes,
             'rims' => $rims,
             'genders' => $genders,
+            'sizes' => $sizes,
         ]);
     }
 
