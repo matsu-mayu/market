@@ -20,6 +20,10 @@
     color: green;
 }
 
+.Index {
+    list-style: none;
+}
+
 .like_button {
   cursor: pointer;
 }

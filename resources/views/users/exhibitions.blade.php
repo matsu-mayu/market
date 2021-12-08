@@ -3,7 +3,7 @@
 @section('content')
   <h1>{{ $title }}</h1>
   <a href="{{ route('items.create') }}">新規出品</a>
-  <ul>
+  <ul class="Index">
         @forelse($items as $item)
             <li>
                 <div>

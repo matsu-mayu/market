@@ -3,7 +3,7 @@
 @section('content')
   <p>息をするように、買おう。</p>
   <a href="{{ route('items.create') }}">新規出品</a>
-  <ul>
+  <ul class="Index">
       @forelse($items as $item)
         <li>
           <div>
