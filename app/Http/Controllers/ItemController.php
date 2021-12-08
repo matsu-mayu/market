@@ -25,12 +25,25 @@ class ItemController extends Controller
         $this->middleware('auth');
     }
 
-     public function index()
+     public function index(Request $request)
     {
         $user = \Auth::user();
         $items = $user->items;
+        $categories = $request->input('category');
+        $shapes = $request->input('shape');
+        $rims = $request->input('rim');
+        $genders = $request->input('gender');
+        $sizes = $request->input('size');
+        $colors = $request->input('color');
+        $query = Item::query();
         return view('items.index', [
             'items' => Item::where('user_id', '!=', \Auth::user()->id)->latest()->get(),
+            'categories' => $categories,
+            'shapes' => $shapes,
+            'rims' => $rims,
+            'genders' => $genders,
+            'sizes' => $sizes,
+            'colors' => $colors,
         ]);
     }
 

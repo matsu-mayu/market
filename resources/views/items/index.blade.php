@@ -1,8 +1,80 @@
 @extends('layouts.logged_in')
  
 @section('content')
-  <p>息をするように、買おう。</p>
   <a href="{{ route('items.create') }}">新規出品</a>
+  
+  <form method="GET" action="{{route('items.index')}}">
+        <input type="search" name="search" placeholder="キーワードを入力" value="@if (isset($search)) {{ $search }} @endif">
+        <div>
+          <label>
+            カテゴリー：
+              <select name="category_id">
+                @foreach($categories as $category)
+                  <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+        </div>
+        <div>
+          <label>
+            性別：
+              <select name="gender_id">
+                @foreach($genders as $gender)
+                  <option value="{{ $gender->id }}">{{ $gender->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+        </div>
+        <div>
+          <label>
+            シェイプ：
+              <select name="shape_id">
+                @foreach($shapes as $shape)
+                  <option value="{{ $shape->id }}">{{ $shape->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+      </div>
+      <div>
+          <label>
+            リムタイプ：
+              <select name="rim_id">
+                @foreach($rims as $rim)
+                  <option value="{{ $rim->id }}">{{ $rim->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+      </div>
+      <div>
+          <label>
+            サイズ：
+              <select name="size_id">
+                @foreach($sizes as $size)
+                  <option value="{{ $size->id }}">{{ $size->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+        </div>
+        <div>
+          <label>
+            カラー：
+              <select name="color_id">
+                @foreach($colors as $color)
+                  <option value="{{ $color->id }}">{{ $color->name }}</option>
+                @endforeach
+              </select>    
+          </label>
+        </div>
+        <div>
+            <button type="submit">検索</button>
+        <button>
+            <a href="{{ route('items.index') }}">
+                クリア
+            </a>
+        </button>
+        </div>
+  </form>
+    
   <ul class="Index">
       @forelse($items as $item)
         <li>
