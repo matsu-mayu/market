@@ -1,6 +1,7 @@
 @extends('layouts.logged_in')
 
 @section('content')
+  <div class="content">
     <h1>{{ $title }}</h1>
     <form method="POST" action="{{ route('profile.update', $user) }}">
         @csrf
@@ -17,4 +18,5 @@
         </div>
         <input type="submit" value="更新">
     </form>
+    </div>
 @endsection

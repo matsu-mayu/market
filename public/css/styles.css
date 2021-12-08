@@ -7,12 +7,40 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+    justify-content: space-between;
 }
 
 .header_nav li {
     margin-right: 30px;
 }
 
+.body {
+    min-width: 1200px;
+    background-color: #EFF9F4;
+    font-family: monospace;
+}
+
+.content {
+    background-color: #EFF9F4;
+    margin: 10px 80px 20px 80px;
+    font-family: monospace;
+}
+
+h1 {
+    padding: 10px 10px 10px 25px;
+    color: #010101;
+    background: white;
+    border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
+}
+
+h2 {
+    padding: 10px 10px 10px 30px;
+    color: #010101;
+    background: white;
+    border-bottom: solid 3px rgb(58, 210, 64);
+}
 .error {
     color: red;
 }
@@ -23,6 +51,12 @@
 
 .Index {
     list-style: none;
+    text-align: center;
+}
+
+.item_create {
+    margin-left: 50px;
+    font-size: 20px;
 }
 
 .like_button {
@@ -44,4 +78,8 @@
 }
 .like_post .like_button {
     color: yellow;
+}
+
+.user_img img {
+    max-width: 350px;
 }

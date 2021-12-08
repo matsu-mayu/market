@@ -3,6 +3,7 @@
 @section('title', $title)
  
 @section('content')
+  <div class="content">
   <h1>{{ $title }}</h1>
   <h2>商品追加フォーム</h2>
   <form method="POST" action="{{ route('items.update', $item) }}">
@@ -91,4 +92,5 @@
       
       <input type="submit" value="出品">
   </form>
+  </div>
 @endsection

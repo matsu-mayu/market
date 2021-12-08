@@ -18,7 +18,7 @@ class UserController extends Controller
     {
         $items = \Auth::user()->items()->latest()->get();
         return view('users.exhibitions', [
-            'title' => $user->name.'の出品商品一覧',
+            'title' => $user->name.'さんの出品商品一覧',
             'items' => $items,
         ]);
     }

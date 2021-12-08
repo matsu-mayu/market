@@ -1,6 +1,7 @@
 @extends('layouts.logged_in')
  
 @section('content')
+  <div class="content">
   <dl>
       <dt>
         商品名
@@ -70,4 +71,5 @@
         <input type="submit" value="内容を確認し、購入する">
       @endif
     </form>
+    </div>
 @endsection

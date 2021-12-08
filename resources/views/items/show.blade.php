@@ -3,8 +3,9 @@
 @section('title', $title)
  
 @section('content')
+  <div class="content">
   <h1>{{ $title }}</h1>
-  <dl>
+  <dl class="Index">
       <dt>
         商品名
       </dt>
@@ -74,5 +75,6 @@
         <input type="submit" value="購入する">
       @endif
       </form>
+  </div>
   </div>
 @endsection

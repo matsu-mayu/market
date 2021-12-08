@@ -1,8 +1,9 @@
 @extends('layouts.logged_in')
 
 @section('content')
+  <div class="content">
     <h1>{{ $title }}</h1>
-    <h2>現在の画像</h2>
+    <p>現在の画像</p>
     @if($user->image !== '')
         <img src="{{ \Storage::url($user->image) }}">
     @else
@@ -23,4 +24,5 @@
         </div>
         <input type="submit" value="更新">
     </form>
+    </div>
 @endsection

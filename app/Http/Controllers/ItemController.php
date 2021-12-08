@@ -30,6 +30,7 @@ class ItemController extends Controller
         $user = \Auth::user();
         $items = $user->items;
         return view('items.index', [
+            'title' => '商品一覧',
             'items' => Item::where('user_id', '!=', \Auth::user()->id)->latest()->get(),
         ]);
     }

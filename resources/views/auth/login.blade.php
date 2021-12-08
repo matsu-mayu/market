@@ -1,6 +1,7 @@
 @extends('layouts.not_logged_in')
 
 @section('content')
+  <div class="content">
     <h1>ログイン</h1>
     
     <form method="POST" action="{{ route('login') }}">
@@ -21,4 +22,5 @@
         
         <input type="submit" value="ログイン">
     </form>
+    </div>
 @endsection
