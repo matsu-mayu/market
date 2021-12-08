@@ -4,7 +4,7 @@
 <header>
     <ul class="header_nav">
         <li><a href="{{ route('items.index') }}">
-                <img class="logo" src="../storage/images/icon.png" alt="icon">
+                <img class="logo" src="/images/icon.png" alt="icon">
             </a>
         </li>
         <li>こんにちは、{{ \Auth::user()->name }}さん！</li>
