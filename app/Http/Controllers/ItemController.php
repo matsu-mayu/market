@@ -28,22 +28,23 @@ class ItemController extends Controller
      public function index(Request $request)
     {
         $user = \Auth::user();
-        $items = $user->items;
-        $categories = $request->input('category');
-        $shapes = $request->input('shape');
-        $rims = $request->input('rim');
-        $genders = $request->input('gender');
-        $sizes = $request->input('size');
-        $colors = $request->input('color');
+        $items = Item::where('user_id', '!=', \Auth::user()->id);
+        
+        $searchSelects = ['category_id', 'shape_id', 'rim_id', 'gender_id', 'size_id', 'color_id'];
+        foreach($searchSelects as $searchSelect) {
+            $items = $this->addSelected($request, $items, $searchSelect);
+        }
+        $items = $items->latest()->get();
+        
         $query = Item::query();
         return view('items.index', [
-            'items' => Item::where('user_id', '!=', \Auth::user()->id)->latest()->get(),
-            'categories' => $categories,
-            'shapes' => $shapes,
-            'rims' => $rims,
-            'genders' => $genders,
-            'sizes' => $sizes,
-            'colors' => $colors,
+            'items' => $items,
+            'categories' => Category::all(),
+            'shapes' => Shape::all(),
+            'rims' => Rim::all(),
+            'genders' => Gender::all(),
+            'sizes' => Size::all(),
+            'colors' => Color::all(),
         ]);
     }
 
@@ -205,5 +206,13 @@ class ItemController extends Controller
             'title' => 'ご購入ありがとうございました。',
             'item' => $item,
         ]);
+    }
+    
+    private function addSelected(Request $request, $items, $idName) {
+        $id = $request->input($idName);
+            if(!empty($id)) {
+                $items = $items->where($idName, '=', $id);
+            }
+        return $items;
     }
 }
