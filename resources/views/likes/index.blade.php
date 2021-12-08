@@ -2,7 +2,7 @@
  
 @section('content')
   <h1>{{ $title }}</h1>
-  <ul>
+  <ul class="Index">
     @forelse($like_items as $like_item)
       <li>
         <div>
