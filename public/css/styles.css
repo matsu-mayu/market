@@ -189,6 +189,12 @@ h2 {
 }
 
 
+/*exhibitions*/
+.items_flex{
+    display: flex;
+}
+
+
 /*like.index*/
 .like_button {
   cursor: pointer;

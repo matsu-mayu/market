@@ -6,7 +6,7 @@
   <a href="{{ route('items.create') }}" class="button_create">出品する</a>
   <ul class="Index">
         @forelse($items as $item)
-            <dl>
+            <dl class="item_flex">
                 <dt>
                     <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
                     <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
