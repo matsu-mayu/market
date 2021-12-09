@@ -91,15 +91,18 @@
   </div>
 </div>
   
-    <ul class="Index">
+    <ul class="list_none">
+      <li>
         @forelse($items as $item)
-          <li>
-            <div>
-              <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
-                <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
-              </a>
-            </div>
-            <div>
+        <div class="item_border">
+          <div class="item_flex">
+            <div class="item_img">
+              <div>
+                <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
+                  <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
+                </a>
+              </div>
+              <div>
               お気に入りに追加：
               <a class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</a>
               <form method="POST" class="like" action="{{ route('items.toggle_like', $item) }}">
@@ -107,6 +110,9 @@
                 @method('patch')
               </form>
             </div>
+            </div>
+            <div class="item_description">
+            
             <dl>
                 <dt>商品名</dt>
                     <dd>{{ $item->name }}</dd>
@@ -125,8 +131,11 @@
                 <dt>価格</dt>
                     <dd>{{ $item->price }}円</dd>
             </dl>
-            <div>
+            <div class="sold_sell">
               {{ $item->isSold() ? '売り切れ' : '販売中' }}
+            </div>
+            </div>
+            </div>
             </div>
           </li>
       @empty
