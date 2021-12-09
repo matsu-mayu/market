@@ -90,7 +90,7 @@
         </label>
       </div>
       
-      <input type="submit" value="出品">
+      <input type="submit" value="出品" class="button">
   </form>
   </div>
 @endsection

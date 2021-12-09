@@ -22,7 +22,7 @@
                 <input type="file" name="image">
             </label>
         </div>
-        <input type="submit" value="更新">
+        <input type="submit" value="更新" class="button">
     </form>
     </div>
 @endsection

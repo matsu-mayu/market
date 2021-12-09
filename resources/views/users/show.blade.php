@@ -20,7 +20,7 @@
                     <dt>プロフィール</dt>
                         <dd>{{ $user->profile }}</dd>
                 </dl>
-                <p><a href="{{ route('profile.edit') }}">プロフィール編集</a></p>
+                <p>[<a href="{{ route('profile.edit') }}">プロフィール編集</a>]</p>
                 <p>出品数：{{ $user->items()->count() }}</p>
             </div>
         </li>

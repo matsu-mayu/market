@@ -16,7 +16,7 @@
                 <input type="text" name="profile" value="{{ $user->profile }}">
             </label>
         </div>
-        <input type="submit" value="更新">
+        <input type="submit" value="更新" class="button">
     </form>
     </div>
 @endsection

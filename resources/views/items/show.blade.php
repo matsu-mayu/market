@@ -72,7 +72,7 @@
       @if( $item->orders()->count() >= 1 )
         <p>売り切れ</p>
       @else
-        <input type="submit" value="購入する">
+        <input type="submit" value="購入する" class="button">
       @endif
       </form>
   </div>

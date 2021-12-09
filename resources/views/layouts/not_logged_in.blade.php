@@ -8,12 +8,12 @@
                 <img class="logo" src="/images/icon.png" alt="icon">
             </a>
         </li>
-        <li>
+        <li class="header_li">
             <a href="{{ route('register') }}">
                 ユーザー登録
             </a>
         </li>
-        <li>
+        <li class="header_li">
             <a href="{{ route('login') }}">
                 ログイン
             </a>

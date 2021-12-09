@@ -5,6 +5,7 @@
 
     <h1>ユーザー登録</h1>
     
+    <div class="register">
     <form method="POST" action"{{ route('register') }}">
         @csrf
         <div>
@@ -36,8 +37,9 @@
         </div>
         
         <div>
-            <input type="submit" value="登録">
+            <input type="submit" value="登録" class="button">
         </div>
     </form>
+    </div>
     </div>
 @endsection
