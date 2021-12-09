@@ -3,9 +3,16 @@
 @section('content')
   <div class="content">
   <h1>{{ $title }}</h1>
-    <a href="{{ route('items.create') }}" class="button">出品する</a>
+  
+  <div class="search_box">
+    <div class="create_box">
+        <a href="{{ route('items.create') }}" class="button_create">出品する</a>
+    </div>
     
+    <div class="search">
     <form method="GET" action="{{route('items.index')}}">
+      <p>検索フォーム</p>
+      <div class="search_flex">
         <div>
           <label>
             カテゴリー：
@@ -39,6 +46,7 @@
               </select>    
           </label>
       </div>
+      <div class="spacer"></div>
       <div>
           <label>
             リムタイプ：
@@ -72,15 +80,16 @@
               </select>    
           </label>
         </div>
-        <div>
-            <button type="submit">検索</button>
-        <button>
-            <a href="{{ route('items.index') }}">
+        </div>
+        <div class="search_button">
+            <button type="submit" class="button">検索</button>
+            <a href="{{ route('items.index') }}" class="button">
                 クリア
             </a>
-        </button>
         </div>
   </form>
+  </div>
+</div>
   
     <ul class="Index">
         @forelse($items as $item)
@@ -121,7 +130,7 @@
             </div>
           </li>
       @empty
-          <li>商品はありません。</li>
+          <li class="no_items">商品はありません。</li>
       @endforelse
     </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
