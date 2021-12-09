@@ -11,7 +11,7 @@
  
         <link rel="stylesheet" href="{{ secure_asset('css/styles.css') }}">
     </head>
-    <body>
+    <body class="body">
         @yield('header')
         
         {{-- エラーメッセージを出力 --}}

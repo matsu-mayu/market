@@ -1,37 +1,34 @@
 @extends('layouts.logged_in')
  
 @section('content')
+  <div class="content">
   <h1>{{ $title }}</h1>
-  <a href="{{ route('items.create') }}">新規出品</a>
+  <a href="{{ route('items.create') }}" class="button">出品する</a>
   <ul class="Index">
         @forelse($items as $item)
-            <li>
-                <div>
+            <dl>
+                <dt>
                     <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
                     <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
                     </a>
-                </div>
-                <div>
-                    商品名：{{ $item->name }}　{{ $item->price }}円
-                </div>
-                <div>
-                    カテゴリー：{{ $item->category->name }}({{ $item->created_at }})
-                </div>
-                <div>
-                    性別：{{ $item->gender->name }}({{ $item->created_at }})
-                </div>
-                <div>
-                    シェイプ：{{ $item->shape->name }}({{ $item->created_at }})
-                </div>
-                <div>
-                    リムタイプ：{{ $item->rim->name }}({{ $item->created_at }})
-                </div>
-                <div>
-                    サイズ：{{ $item->size->name }}({{ $item->created_at }})
-                </div>
-                <div>
-                    カラー：{{ $item->color->name }}({{ $item->created_at }})
-                </div>
+                </dt>
+                <dt>商品名</dt>
+                    <dd>{{ $item->name }}</dd>
+                <dt>カテゴリー</dt>
+                    <dd>{{ $item->category->name }}</dd>
+                <dt>性別</dt>
+                    <dd>{{ $item->gender->name }}</dd>
+                <dt>シェイプ</dt>
+                    <dd>{{ $item->shape->name }}</dd>
+                <dt>リムタイプ</dt>
+                    <dd>{{ $item->rim->name }}</dd>
+                <dt>サイズ</dt>
+                    <dd>{{ $item->size->name }}</dd>
+                <dt>カラー</dt>
+                    <dd>{{ $item->color->name }}</dd>
+                <dt>価格</dt>
+                    <dd>{{ $item->price }}円</dd>
+            </dl>
     
                 [<a href="{{ route('items.edit', $item) }}">編集</a>]
                 [<a href="{{ route('items.edit_image', $item) }}">画像を変更</a>]
@@ -52,4 +49,5 @@
         <li>商品はありません。</li>
     @endforelse
   </ul>
+  </div>
 @endsection

@@ -1,8 +1,8 @@
 @extends('layouts.logged_in')
  
 @section('content')
+  <div class="content">
   <h1>{{ $title }}</h1>
-  <h2>商品追加フォーム</h2>
   <form method="POST" action="{{ route('items.store') }}" enctype="multipart/form-data">
       @csrf
       <div>
@@ -90,6 +90,7 @@
         </label>
       </div>
       
-      <input type="submit" value="出品">
+      <input type="submit" value="出品" class="button">
   </form>
+  </div>
 @endsection

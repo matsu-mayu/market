@@ -3,6 +3,7 @@
 @section('title', $title)
  
 @section('content')
+  <div class="content">
   <h1>{{ $title }}</h1>
   <dl>
       <dt>
@@ -68,5 +69,6 @@
   </dl>
   <div>
     <a href="{{ url('/top') }}">トップに戻る</a>
+  </div>
   </div>
 @endsection

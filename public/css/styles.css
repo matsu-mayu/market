@@ -1,6 +1,7 @@
+/*layouts*/
 .logo {
-    margin: 10px;
-    width: 200px;
+    margin: 10px 20px 10px 10px;
+    width: 150px;
 }
 
 .header_nav {
@@ -9,10 +10,55 @@
     padding-left: 0;
 }
 
-.header_nav li {
+.header_li {
     margin-right: 30px;
+    margin-top: 15px;
 }
 
+.header_left {
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.header_right {
+    margin-right: auto;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.body {
+    min-width: 1200px;
+    background-color: #EFF9F4;
+    font-family: monospace;
+}
+
+.content {
+    background-color: #EFF9F4;
+    margin: 10px 150px 20px 150px;
+    font-family: monospace;
+}
+
+h1 {
+    padding: 10px 10px 10px 10px;
+    color: #010101;
+    background: white;
+    border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.icon_png {
+    width: 30px;
+    margin: 0px;
+}
+
+h2 {
+    padding: 10px 10px 10px 30px;
+    color: #010101;
+    background: white;
+    border-bottom: solid 3px rgb(58, 210, 64);
+}
 .error {
     color: red;
 }
@@ -23,25 +69,80 @@
 
 .Index {
     list-style: none;
+    text-align: center;
 }
 
+
+
+/*login*/
+.login {
+    margin: 20px;
+}
+
+.login input {
+    margin: 5px;
+}
+
+.button {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 11pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 8px 8px;   /* 余白       */
+    background    : #ffffff;     /* 背景色     */
+    color         : black;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 3px 3px 3px #666666;  /* 影の設定 */
+    border        : 2px solid rgb(58, 210, 64);    /* 枠の指定 */
+}
+
+.button:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #ffffff;     /* 背景色     */
+    background    : #3ad240;     /* 文字色     */
+}
+
+.register {
+    margin: 20px;
+}
+
+/*register*/
+.register input {
+    margin: 5px;
+}
+
+/*like.index*/
 .like_button {
   cursor: pointer;
 }
+
 .like {
   display: inline;
 }
+
 .like_post {
     background-color: #dccaca;
     border-top: solid 1px #e67c2e;
     border-bottom: solid 1px #e67c2e;
 }
+
 .like_post .post_body_heading {
     background-color: #dccaca;
 }
+
 .like_post .post_comments {
     background-color: #e4d6c7;
 }
+
 .like_post .like_button {
     color: yellow;
+}
+
+
+
+/*profile*/
+.user_img img {
+    max-width: 350px;
 }

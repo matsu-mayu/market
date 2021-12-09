@@ -3,8 +3,9 @@
 @section('title', $title)
  
 @section('content')
+  <div class="content">
   <h1>{{ $title }}</h1>
-  <dl>
+  <dl class="Index">
       <dt>
         商品名
       </dt>
@@ -71,8 +72,9 @@
       @if( $item->orders()->count() >= 1 )
         <p>売り切れ</p>
       @else
-        <input type="submit" value="購入する">
+        <input type="submit" value="購入する" class="button">
       @endif
       </form>
+  </div>
   </div>
 @endsection
