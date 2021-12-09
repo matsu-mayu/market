@@ -25,13 +25,26 @@ class ItemController extends Controller
         $this->middleware('auth');
     }
 
-     public function index()
+     public function index(Request $request)
     {
         $user = \Auth::user();
-        $items = $user->items;
+        $items = Item::where('user_id', '!=', \Auth::user()->id);
+        
+        $searchSelects = ['category_id', 'shape_id', 'rim_id', 'gender_id', 'size_id', 'color_id'];
+        foreach($searchSelects as $searchSelect) {
+            $items = $this->addSelected($request, $items, $searchSelect);
+        }
+        $items = $items->latest()->get();
+        
+        $query = Item::query();
         return view('items.index', [
-            'title' => '商品一覧',
-            'items' => Item::where('user_id', '!=', \Auth::user()->id)->latest()->get(),
+            'items' => $items,
+            'categories' => Category::all(),
+            'shapes' => Shape::all(),
+            'rims' => Rim::all(),
+            'genders' => Gender::all(),
+            'sizes' => Size::all(),
+            'colors' => Color::all(),
         ]);
     }
 
@@ -193,5 +206,13 @@ class ItemController extends Controller
             'title' => 'ご購入ありがとうございました。',
             'item' => $item,
         ]);
+    }
+    
+    private function addSelected(Request $request, $items, $idName) {
+        $id = $request->input($idName);
+            if(!empty($id)) {
+                $items = $items->where($idName, '=', $id);
+            }
+        return $items;
     }
 }
