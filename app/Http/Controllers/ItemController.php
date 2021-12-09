@@ -38,6 +38,7 @@ class ItemController extends Controller
         
         $query = Item::query();
         return view('items.index', [
+            'title' => '商品一覧',
             'items' => $items,
             'categories' => Category::all(),
             'shapes' => Shape::all(),
