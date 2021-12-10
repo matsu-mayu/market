@@ -96,6 +96,7 @@ h2 {
     transition    : .3s;         /* なめらか変化 */
     box-shadow    : 3px 3px 3px #666666;  /* 影の設定 */
     border        : 2px solid rgb(58, 210, 64);    /* 枠の指定 */
+    margin: 10px 0px 10px 0px;
 }
 
 .button:hover {
@@ -187,6 +188,47 @@ h2 {
     font-weight: 700;
     font-size: 20px;
 }
+
+
+/*exhibitions*/
+.list_none {
+    list-style: none;
+}
+
+.item_flex{
+    display: flex;
+    justify-content: center;
+}
+
+.item_border {
+    width: 700px;
+    list-style: none;
+    text-align: center;
+    border: solid 3px rgb(58, 210, 64);/*線*/
+    border-radius: 10px;/*角の丸み*/
+    margin-bottom: 20px;
+}
+
+.item_img {
+    padding: 80px 20px 20px 10px;
+}
+
+.item_img img {
+    width: 500px;
+}
+
+
+.item_description {
+    margin: 10px 10px 10px 10px;
+}
+
+.sold_sell {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+
 
 
 /*like.index*/

@@ -10,103 +10,109 @@
     </div>
     
     <div class="search">
-    <form method="GET" action="{{route('items.index')}}">
-      <p>検索フォーム</p>
-      <div class="search_flex">
-        <div>
-          <label>
-            カテゴリー：
-              <select name="category_id">
-                <option value="">選択してください</option>
-                @foreach($categories as $category)
-                  <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
-              </select>    
-          </label>
-        </div>
-        <div>
-          <label>
-            性別：
-              <select name="gender_id">
-                <option value="">選択してください</option>
-                @foreach($genders as $gender)
-                  <option value="{{ $gender->id }}">{{ $gender->name }}</option>
-                @endforeach
-              </select>    
-          </label>
-        </div>
-        <div>
-          <label>
-            シェイプ：
-              <select name="shape_id">
-                <option value="">選択してください</option>
-                @foreach($shapes as $shape)
-                  <option value="{{ $shape->id }}">{{ $shape->name }}</option>
-                @endforeach
-              </select>    
-          </label>
-      </div>
-      <div class="spacer"></div>
-      <div>
-          <label>
-            リムタイプ：
-              <select name="rim_id">
-                <option value="">選択してください</option>
-                @foreach($rims as $rim)
-                  <option value="{{ $rim->id }}">{{ $rim->name }}</option>
-                @endforeach
-              </select>    
-          </label>
-      </div>
-      <div>
-          <label>
-            サイズ：
-              <select name="size_id">
-                <option value="">選択してください</option>
-                @foreach($sizes as $size)
-                  <option value="{{ $size->id }}">{{ $size->name }}</option>
-                @endforeach
-              </select>    
-          </label>
-        </div>
-        <div>
-          <label>
-            カラー：
-              <select name="color_id">
-                <option value="">選択してください</option>
-                @foreach($colors as $color)
-                  <option value="{{ $color->id }}">{{ $color->name }}</option>
-                @endforeach
-              </select>    
-          </label>
-        </div>
-        </div>
-        <div class="search_button">
+      <form method="GET" action="{{route('items.index')}}">
+        <p>検索フォーム</p>
+          <div class="search_flex">
+            <div>
+              <label>
+                カテゴリー：
+                  <select name="category_id">
+                    <option value="">選択してください</option>
+                    @foreach($categories as $category)
+                      <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                  </select>    
+              </label>
+            </div>
+            <div>
+              <label>
+                性別：
+                  <select name="gender_id">
+                    <option value="">選択してください</option>
+                    @foreach($genders as $gender)
+                      <option value="{{ $gender->id }}">{{ $gender->name }}</option>
+                    @endforeach
+                  </select>    
+              </label>
+            </div>
+            <div>
+              <label>
+                シェイプ：
+                  <select name="shape_id">
+                    <option value="">選択してください</option>
+                    @foreach($shapes as $shape)
+                      <option value="{{ $shape->id }}">{{ $shape->name }}</option>
+                    @endforeach
+                  </select>    
+              </label>
+            </div>
+            <div class="spacer"></div>
+            <div>
+              <label>
+                リムタイプ：
+                  <select name="rim_id">
+                    <option value="">選択してください</option>
+                      @foreach($rims as $rim)
+                        <option value="{{ $rim->id }}">{{ $rim->name }}</option>
+                      @endforeach
+                  </select>    
+              </label>
+            </div>
+            <div>
+              <label>
+                サイズ：
+                  <select name="size_id">
+                    <option value="">選択してください</option>
+                    @foreach($sizes as $size)
+                      <option value="{{ $size->id }}">{{ $size->name }}</option>
+                    @endforeach
+                  </select>    
+              </label>
+            </div>
+            <div>
+              <label>
+                カラー：
+                  <select name="color_id">
+                    <option value="">選択してください</option>
+                    @foreach($colors as $color)
+                      <option value="{{ $color->id }}">{{ $color->name }}</option>
+                    @endforeach
+                  </select>    
+              </label>
+            </div>
+          </div>
+          <div class="search_button">
             <button type="submit" class="button">検索</button>
             <a href="{{ route('items.index') }}" class="button">
                 クリア
             </a>
-        </div>
-  </form>
+          </div>
+      </form>
+    </div>
   </div>
-</div>
   
-    <ul class="Index">
+    <ul class="list_none">
+      <li>
         @forelse($items as $item)
-          <li>
-            <div>
-              <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
-                <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
-              </a>
+        <div class="item_border">
+          <div class="item_flex">
+            <div class="item_img">
+              <div>
+                <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
+                  <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
+                </a>
+              </div>
+              <div class="button">
+                お気に入りに追加：
+                  <a class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</a>
+                  <form method="POST" class="like" action="{{ route('items.toggle_like', $item) }}">
+                    @csrf
+                    @method('patch')
+                  </form>
+              </div>
             </div>
-            <div>
-              お気に入りに追加：
-              <a class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}</a>
-              <form method="POST" class="like" action="{{ route('items.toggle_like', $item) }}">
-                @csrf
-                @method('patch')
-              </form>
-            </div>
+            
+            <div class="item_description">
             <dl>
                 <dt>商品名</dt>
                     <dd>{{ $item->name }}</dd>
@@ -125,9 +131,12 @@
                 <dt>価格</dt>
                     <dd>{{ $item->price }}円</dd>
             </dl>
-            <div>
+            <div class="sold_sell">
               {{ $item->isSold() ? '売り切れ' : '販売中' }}
             </div>
+            </div>
+          </div>
+        </div>
           </li>
       @empty
           <li class="no_items">商品はありません。</li>
