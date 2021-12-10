@@ -36,14 +36,14 @@
                             <dd>{{ $item->color->name }}</dd>
                         <dt>価格</dt>
                             <dd>{{ $item->price }}円</dd>
+                        <div class="sold_sell">
+                            {{ $item->isSold() ? '売り切れ' : '販売中' }}
+                        </div>
                     </div>
                 </div>
             </dl>
             
-                <div class="sold_sell">
-                    {{ $item->isSold() ? '売り切れ' : '販売中' }}
-                </div>
-    
+                
                 [<a href="{{ route('items.edit', $item) }}">編集</a>]
                 [<a href="{{ route('items.edit_image', $item) }}">画像を変更</a>]
                 
