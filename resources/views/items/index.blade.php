@@ -40,15 +40,15 @@
                 シェイプ：
                   <select name="shape_id">
                     <option value="">選択してください</option>
-                     <div id="modal">
-                        <p>シェイプとは？</p>
-                          <p>メガネの形を表します。</p>
-                      </div>
-                      <a id="modal-visible-link" href="modal"><img src="/public/images/question.png"></a>
                     @foreach($shapes as $shape)
                       <option value="{{ $shape->id }}">{{ $shape->name }}</option>
                     @endforeach
-                  </select>    
+                  </select> 
+                  <div id="modal_shape">
+                    <p>シェイプとは？</p>
+                      <p>メガネの形を表します。</p>
+                  </div>
+                  <a class="modal-visible-link" href="#modal_shape"><img src="/images/question.png"></a>
               </label>
             </div>
             <div class="spacer"></div>
@@ -147,15 +147,13 @@
           <li class="no_items">商品はありません。</li>
       @endforelse
     </ul>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script>
         /* global $ */
         $('.like_button').on('click', (event) => {
             $(event.currentTarget).next().submit();
         })
-      </script>
-      <script>
-        $("modal-visible-link").modaal();
+        
+        $(".modal-visible-link").modaal();
       </script>
     </div>
 @endsection

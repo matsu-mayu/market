@@ -189,6 +189,11 @@ h2 {
     font-size: 20px;
 }
 
+#modal_shape {
+    display: none;
+}
+
+
 
 /*exhibitions*/
 .list_none {
