@@ -37,18 +37,20 @@
             </div>
             <div>
               <label>
-                シェイプ：
+                シェイプ
+                <div id="modal_shape">
+                    <p>シェイプとは？</p>
+                      <p>メガネの形を表します。</p>
+                  </div>
+                  <a class="modal-visible-link" href="#modal_shape"><img class="modal_icon" src="/images/question.png"></a>
+                  ：
                   <select name="shape_id">
                     <option value="">選択してください</option>
                     @foreach($shapes as $shape)
                       <option value="{{ $shape->id }}">{{ $shape->name }}</option>
                     @endforeach
                   </select> 
-                  <div id="modal_shape">
-                    <p>シェイプとは？</p>
-                      <p>メガネの形を表します。</p>
-                  </div>
-                  <a class="modal-visible-link" href="#modal_shape"><img src="/images/question.png"></a>
+                  
               </label>
             </div>
             <div class="spacer"></div>

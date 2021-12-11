@@ -193,7 +193,9 @@ h2 {
     display: none;
 }
 
-
+.modal_icon {
+    width: 20px;
+}
 
 /*exhibitions*/
 .list_none {
