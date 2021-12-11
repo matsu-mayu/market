@@ -189,6 +189,26 @@ h2 {
     font-size: 20px;
 }
 
+#modal_shape {
+    display: none;
+}
+
+#modal_rim {
+    display: none;
+}
+
+#modal_size {
+    display: none;
+}
+
+.modal_icon {
+    width: 20px;
+}
+
+.modal_title {
+    font-weight: bold;
+}
+
 
 /*exhibitions*/
 .list_none {
