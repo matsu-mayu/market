@@ -39,7 +39,7 @@
               <label>
                 シェイプ
                 <div id="modal_shape">
-                    <p>シェイプとは？</p>
+                    <p class="modal_title">≪シェイプとは？≫</p>
                       <p>メガネの形を表します。</p>
                   </div>
                   <a class="modal-visible-link" href="#modal_shape"><img class="modal_icon" src="/images/question.png"></a>
@@ -56,7 +56,13 @@
             <div class="spacer"></div>
             <div>
               <label>
-                リムタイプ：
+                リムタイプ
+                <div id="modal_rim">
+                    <p class="modal_title">≪リムタイプとは？≫</p>
+                      <p>縁（フチ）のタイプを表します。</p>
+                  </div>
+                  <a class="modal-visible-link" href="#modal_rim"><img class="modal_icon" src="/images/question.png"></a>
+                  ：
                   <select name="rim_id">
                     <option value="">選択してください</option>
                       @foreach($rims as $rim)
@@ -67,7 +73,12 @@
             </div>
             <div>
               <label>
-                サイズ：
+                サイズ
+                <div id="modal_size">
+                    <p class="modal_title">≪サイズの見方≫</p>
+                      <p>テンプル（柄の部分）に記載されたサイズをご確認ください。</p>
+                  </div>
+                  <a class="modal-visible-link" href="#modal_size"><img class="modal_icon" src="/images/question.png"></a>：
                   <select name="size_id">
                     <option value="">選択してください</option>
                     @foreach($sizes as $size)
