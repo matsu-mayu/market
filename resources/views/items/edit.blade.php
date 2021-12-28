@@ -3,6 +3,7 @@
 @section('title', $title)
  
 @section('content')
+  <div class="content">
   <h1>{{ $title }}</h1>
   <h2>商品追加フォーム</h2>
   <form method="POST" action="{{ route('items.update', $item) }}">
@@ -37,7 +38,59 @@
                     </select>      
                 </label>          
         </div>
+        <div>
+                <label>
+                  性別：
+                    <select name="gender_id">
+                        @foreach($genders as $gender)
+                            <option value="{{ $gender->id }}">{{ $gender->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
+        <div>
+                <label>
+                  シェイプ：
+                    <select name="shape_id">
+                        @foreach($shapes as $shape)
+                            <option value="{{ $shape->id }}">{{ $shape->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
+        <div>
+                <label>
+                  リムタイプ：
+                    <select name="rim_id">
+                        @foreach($rims as $rim)
+                            <option value="{{ $rim->id }}">{{ $rim->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
+        <div>
+                <label>
+                  サイズ：
+                    <select name="size_id">
+                        @foreach($sizes as $size)
+                            <option value="{{ $size->id }}">{{ $size->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
+        <div>
+                <label>
+                  カラー：
+                    <select name="color_id">
+                        @foreach($colors as $color)
+                            <option value="{{ $color->id }}">{{ $color->name }}</option>
+                        @endforeach
+                    </select>      
+                </label>          
+        </div>
+        
       
-      <input type="submit" value="出品">
+      <input type="submit" value="出品" class="button">
   </form>
+  </div>
 @endsection

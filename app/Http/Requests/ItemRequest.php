@@ -28,6 +28,11 @@ class ItemRequest extends FormRequest
             'description' => ['required', 'max:1000'],
             'price' => ['required', 'integer', 'min:0'],
             'category_id' => ['exists:categories,id'],
+            'shape_id' => ['exists:shapes,id'],
+            'rim_id' => ['exists:rims,id'],
+            'gender_id' => ['exists:genders,id'],
+            'size_id' => ['exists:sizes,id'],
+            'color_id' => ['exists:colors,id'],
             'image' => [
                 'required',
                 'file',

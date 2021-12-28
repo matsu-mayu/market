@@ -10,6 +10,11 @@ use App\Http\Requests\ItemImageRequest;
 use App\Like;
 use App\Order;
 use App\Category;
+use App\Shape;
+use App\Rim;
+use App\Gender;
+use App\Size;
+use App\Color;
 use App\Services\FileUploadService;
 
 
@@ -20,21 +25,47 @@ class ItemController extends Controller
         $this->middleware('auth');
     }
 
-     public function index()
+     public function index(Request $request)
     {
         $user = \Auth::user();
-        $items = $user->items;
+        $items = Item::where('user_id', '!=', \Auth::user()->id);
+        
+        $searchSelects = ['category_id', 'shape_id', 'rim_id', 'gender_id', 'size_id', 'color_id'];
+        foreach($searchSelects as $searchSelect) {
+            $items = $this->addSelected($request, $items, $searchSelect);
+        }
+        $items = $items->latest()->get();
+        
+        $query = Item::query();
         return view('items.index', [
-            'items' => Item::where('user_id', '!=', \Auth::user()->id)->latest()->get(),
+            'title' => '商品一覧',
+            'items' => $items,
+            'categories' => Category::all(),
+            'shapes' => Shape::all(),
+            'rims' => Rim::all(),
+            'genders' => Gender::all(),
+            'sizes' => Size::all(),
+            'colors' => Color::all(),
         ]);
     }
 
     public function create()
     {
         $categories = Category::all();
+        $shapes = Shape::all();
+        $rims = Rim::all();
+        $genders = Gender::all();
+        $sizes = Size::all();
+        $colors = Color::all();
+        
         return view('items.create', [
             'title' => '商品を出品',
             'categories' => $categories,
+            'shapes' => $shapes,
+            'rims' => $rims,
+            'genders' => $genders,
+            'sizes' => $sizes,
+            'colors' => $colors,
         ]);
     }
 
@@ -51,6 +82,11 @@ class ItemController extends Controller
             'image' => $path,
             'name' => $request->name,
             'category_id' => $request->category_id,
+            'shape_id' => $request->shape_id,
+            'rim_id' => $request->rim_id,
+            'gender_id' => $request->gender_id,
+            'size_id' => $request->size_id,
+            'color_id' => $request->color_id,
             'description' => $request->description,
             'price' => $request->price,
         ]);
@@ -72,18 +108,28 @@ class ItemController extends Controller
         $item = Item::find($id);
         
         $categories = Category::all();
+        $shapes = Shape::all();
+        $rims = Rim::all();
+        $genders = Gender::all();
+        $sizes = Size::all();
+        $colors = Color::all();
         
         return view('items.edit', [
             'title' => '商品情報の編集',
             'item' => $item,
             'categories' => $categories,
+            'shapes' => $shapes,
+            'rims' => $rims,
+            'genders' => $genders,
+            'sizes' => $sizes,
+            'colors' => $colors,
         ]);
     }
 
     public function update(ItemEditRequest $request, $id)
     {
         $item = Item::find($id);
-        $item->update($request->only(['name', 'description', 'price', 'category']));
+        $item->update($request->only(['name', 'description', 'price', 'category', 'shape', 'rim', 'gender']));
         session()->flash('success', '商品を編集しました');
         return redirect()->route('items.show', $id);
     }
@@ -161,5 +207,13 @@ class ItemController extends Controller
             'title' => 'ご購入ありがとうございました。',
             'item' => $item,
         ]);
+    }
+    
+    private function addSelected(Request $request, $items, $idName) {
+        $id = $request->input($idName);
+            if(!empty($id)) {
+                $items = $items->where($idName, '=', $id);
+            }
+        return $items;
     }
 }

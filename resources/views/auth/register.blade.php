@@ -1,8 +1,11 @@
 @extends('layouts.not_logged_in')
 
 @section('content')
+  <div class="content">
+
     <h1>ユーザー登録</h1>
     
+    <div class="register">
     <form method="POST" action"{{ route('register') }}">
         @csrf
         <div>
@@ -34,7 +37,9 @@
         </div>
         
         <div>
-            <input type="submit" value="登録">
+            <input type="submit" value="登録" class="button">
         </div>
     </form>
+    </div>
+    </div>
 @endsection
