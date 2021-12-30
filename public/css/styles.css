@@ -75,12 +75,22 @@ h2 {
 
 
 /*login*/
-.login {
-    margin: 20px;
+.auth_content {
+    width: 500px;
+    margin: auto;
 }
 
-.login input {
-    margin: 5px;
+.auth_h1 {
+    color: #010101;
+    background: white;
+    border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -105,11 +115,12 @@ h2 {
     background    : #3ad240;     /* 文字色     */
 }
 
+/*register*/
 .register {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/*register*/
 .register input {
     margin: 5px;
 }
