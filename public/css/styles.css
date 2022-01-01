@@ -40,8 +40,7 @@
 }
 
 h1 {
-    width: 800px;
-    margin: auto;
+    margin: 0px auto 10px auto;
     padding: 10px 10px 10px 10px;
     color: #010101;
     background: white;
@@ -56,7 +55,6 @@ h1 {
 }
 
 h2 {
-    width: 800px;
     margin: auto;
     padding: 10px 10px 10px 30px;
     color: #010101;
@@ -76,6 +74,18 @@ h2 {
 .Index {
     list-style: none;
     text-align: center;
+}
+
+dt {
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: solid 1px #010101;
+    width: 100px;
+    margin: 0px auto 10px auto;
+}
+
+dd {
+    margin-bottom: 10px;
 }
 
 
@@ -103,6 +113,7 @@ h2 {
     display: inline-block;
     text-align: right;
     width: 350px;
+    margin: 10px 0px 5px 0px;
 }
 
 .button {
@@ -200,6 +211,12 @@ h2 {
     width: 325px;
 }
 
+.items_info {
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+}
+
 .search p {
     font-weight: 700;
 }
@@ -217,6 +234,13 @@ h2 {
 .no_items {
     font-weight: 700;
     font-size: 20px;
+}
+
+.items_flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 #modal_shape {
@@ -254,17 +278,20 @@ h2 {
     border-radius: 10px;/*角の丸み*/
     flex-basis: 30%;
     text-align: center;
+    background-color: #ffffff;
     margin: 10px;
     padding: 10px;
 }
 
 .item_img {
     width: 400px;
+    margin-bottom: 15px;
 }
 
 .sold_sell {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 
