@@ -40,6 +40,8 @@
 }
 
 h1 {
+    width: 800px;
+    margin: auto;
     padding: 10px 10px 10px 10px;
     color: #010101;
     background: white;
@@ -54,10 +56,14 @@ h1 {
 }
 
 h2 {
+    width: 800px;
+    margin: auto;
     padding: 10px 10px 10px 30px;
     color: #010101;
     background: white;
     border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
 }
 .error {
     color: red;
@@ -75,12 +81,28 @@ h2 {
 
 
 /*login*/
-.login {
-    margin: 20px;
+.auth_content {
+    width: 500px;
+    margin: auto;
 }
 
-.login input {
-    margin: 5px;
+.auth_h1 {
+    color: #010101;
+    background: white;
+    border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+
+.login_label {
+    display: inline-block;
+    text-align: right;
+    width: 350px;
 }
 
 .button {
@@ -96,7 +118,6 @@ h2 {
     transition    : .3s;         /* なめらか変化 */
     box-shadow    : 3px 3px 3px #666666;  /* 影の設定 */
     border        : 2px solid rgb(58, 210, 64);    /* 枠の指定 */
-    margin: 10px 0px 10px 0px;
 }
 
 .button:hover {
@@ -105,15 +126,21 @@ h2 {
     background    : #3ad240;     /* 文字色     */
 }
 
+/*register*/
 .register {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/*register*/
 .register input {
     margin: 5px;
 }
 
+.register_label {
+    display: inline-block;
+    text-align: right;
+    width: 400px;
+}
 
 /*items.create*/
 .button_create {
@@ -273,5 +300,20 @@ h2 {
 
 /*profile*/
 .user_img img {
-    max-width: 350px;
+    max-width: 400px;
+    margin: 15px 0px 5px 0px;
 }
+
+.profile_flex {
+    display: flex;
+    justify-content: center;
+}
+
+.profile_info {
+    width: 200px;
+    margin: 20px 10px 20px 10px;
+    padding: 15px;
+}
+
+
+/* users */
