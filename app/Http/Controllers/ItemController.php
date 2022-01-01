@@ -192,6 +192,7 @@ class ItemController extends Controller
     public function confirm($id) {
         $item = Item::find($id);
         return view('items.confirm', [
+            'title' => '購入確認画面',
             'item' => $item,
         ]);
     }

@@ -13,7 +13,7 @@
         <p>検索フォーム</p>
           <div class="search_flex">
             <div>
-              <label class="item_label">
+              <label class="items_label">
                 カテゴリー：
                   <select name="category_id">
                     <option value="">選択してください</option>
@@ -24,7 +24,7 @@
               </label>
             </div>
             <div>
-              <label class="item_label">
+              <label class="items_label">
                 性別：
                   <select name="gender_id">
                     <option value="">選択してください</option>
@@ -35,7 +35,7 @@
               </label>
             </div>
             <div>
-              <label class="item_label">
+              <label class="items_label">
                 シェイプ
                 <div id="modal_shape">
                     <p class="modal_title">≪シェイプとは？≫</p>
@@ -53,7 +53,7 @@
               </label>
             </div>
             <div>
-              <label class="item_label">
+              <label class="items_label">
                 リムタイプ
                 <div id="modal_rim">
                     <p class="modal_title">≪リムタイプとは？≫</p>
@@ -70,7 +70,7 @@
               </label>
             </div>
             <div>
-              <label class="item_label">
+              <label class="items_label">
                 サイズ
                 <div id="modal_size">
                     <p class="modal_title">≪サイズの見方≫</p>
@@ -86,7 +86,7 @@
               </label>
             </div>
             <div>
-              <label class="item_label">
+              <label class="items_label">
                 カラー：
                   <select name="color_id">
                     <option value="">選択してください</option>
@@ -109,7 +109,7 @@
   
     <ul class="index_flex">
       @forelse($items as $item)
-        <li class="item_border">
+        <li class="items_border items_margin">
             <div>
               <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
                 <img class="item_img" enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">

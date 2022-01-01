@@ -74,6 +74,8 @@ h2 {
 .Index {
     list-style: none;
     text-align: center;
+    width: 800px;
+    margin: auto;
 }
 
 dt {
@@ -180,6 +182,10 @@ dd {
 
 
 /*items.index*/
+.items_margin {
+    margin: 10px;
+}
+
 .search_box {
     display: flex;
     justify-content: center;
@@ -205,7 +211,7 @@ dd {
     justify-content: space-around;
 }
 
-.item_label {
+.items_label {
     display: inline-block;
     text-align: right;
     width: 325px;
@@ -276,8 +282,8 @@ dd {
 
 .buy_button {
     font-size: 20px;
+    margin-top: 15px;
 }
-
 
 
 /*exhibitions*/
@@ -288,14 +294,14 @@ dd {
     justify-content: center;
 }
 
-.item_border {
+.items_border {
     list-style: none;
     border: solid 3px rgb(58, 210, 64);/*線*/
     border-radius: 10px;/*角の丸み*/
     flex-basis: 30%;
     text-align: center;
     background-color: #ffffff;
-    margin: 10px;
+    /* margin: 10px; */
     padding: 10px;
 }
 
