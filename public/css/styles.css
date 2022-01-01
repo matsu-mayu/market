@@ -145,7 +145,7 @@ h2 {
 /*items.create*/
 .button_create {
     width: 150px;
-    margin: 25px 5px 25px 30px;
+    margin: 25px 5px 25px 5px;
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
     font-size     : 17pt;        /* 文字サイズ */
@@ -175,12 +175,12 @@ h2 {
 }
 
 .create_box {
-    margin: 80px 20px 20px 20px;
+    margin: 80px 10px 20px 10px;
 }
 
 .search {
-    padding: 0.5em 1em;
-    margin: 20px 10px 20px 10px;
+    padding: 3px;
+    margin: 20px 5px 20px 5px;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px rgb(58, 210, 64);/*線*/
@@ -194,8 +194,10 @@ h2 {
     justify-content: space-around;
 }
 
-.spacer {
-  width: 100%;
+.item_label {
+    display: inline-block;
+    text-align: right;
+    width: 325px;
 }
 
 .search p {
@@ -314,6 +316,3 @@ h2 {
     margin: 20px 10px 20px 10px;
     padding: 15px;
 }
-
-
-/* users */

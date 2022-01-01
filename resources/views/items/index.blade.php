@@ -2,7 +2,6 @@
 
 @section('content')
   <div class="content">
-  <h1>{{ $title }}</h1>
   
   <div class="search_box">
     <div class="create_box">
@@ -14,7 +13,7 @@
         <p>検索フォーム</p>
           <div class="search_flex">
             <div>
-              <label>
+              <label class="item_label">
                 カテゴリー：
                   <select name="category_id">
                     <option value="">選択してください</option>
@@ -25,7 +24,7 @@
               </label>
             </div>
             <div>
-              <label>
+              <label class="item_label">
                 性別：
                   <select name="gender_id">
                     <option value="">選択してください</option>
@@ -36,7 +35,7 @@
               </label>
             </div>
             <div>
-              <label>
+              <label class="item_label">
                 シェイプ
                 <div id="modal_shape">
                     <p class="modal_title">≪シェイプとは？≫</p>
@@ -53,9 +52,8 @@
                   
               </label>
             </div>
-            <div class="spacer"></div>
             <div>
-              <label>
+              <label class="item_label">
                 リムタイプ
                 <div id="modal_rim">
                     <p class="modal_title">≪リムタイプとは？≫</p>
@@ -72,7 +70,7 @@
               </label>
             </div>
             <div>
-              <label>
+              <label class="item_label">
                 サイズ
                 <div id="modal_size">
                     <p class="modal_title">≪サイズの見方≫</p>
@@ -88,7 +86,7 @@
               </label>
             </div>
             <div>
-              <label>
+              <label class="item_label">
                 カラー：
                   <select name="color_id">
                     <option value="">選択してください</option>
