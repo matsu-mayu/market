@@ -7,28 +7,28 @@
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div>
-                        <label>
+                        <label class="register_label">
                             ユーザー名：
                             <input type="text" name="name">
                         </label>
                     </div>
                     
                     <div>
-                        <label>
+                        <label class="register_label">
                             メールアドレス：
                             <input type="email" name="email">
                         </label>
                     </div>
                     
                     <div>
-                        <label>
+                        <label class="register_label">
                             パスワード：
                             <input type="password" name="password">
                         </label>
                     </div>
                     
                     <div>
-                        <label>
+                        <label class="register_label">
                             パスワード（確認用）：
                             <input type="password" name="password_confirmation">
                         </label>

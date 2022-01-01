@@ -7,19 +7,19 @@
             <div class="login">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
-                        <div class="auth_input">
-                            <label>
+                        <div>
+                            <label class="login_label">
                                 メールアドレス:
                                 <input type="email" name="email">
                             </label>
                         </div>
                         <div>
-                            <label>
+                            <label class="login_label">
                                 パスワード:
                                 <input type="password" name="password">
                             </label>
                         </div>
-                    <input type="submit" value="ログイン" class="button">
+                        <input type="submit" value="ログイン" class="button">
                 </form>
             </div>
     </div>

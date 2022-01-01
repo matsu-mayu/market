@@ -93,6 +93,12 @@ h2 {
     justify-content: center;
 }
 
+.login_label {
+    display: inline-block;
+    text-align: right;
+    width: 350px;
+}
+
 .button {
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
@@ -106,7 +112,6 @@ h2 {
     transition    : .3s;         /* なめらか変化 */
     box-shadow    : 3px 3px 3px #666666;  /* 影の設定 */
     border        : 2px solid rgb(58, 210, 64);    /* 枠の指定 */
-    margin: 10px 0px 10px 0px;
 }
 
 .button:hover {
@@ -123,6 +128,12 @@ h2 {
 
 .register input {
     margin: 5px;
+}
+
+.register_label {
+    display: inline-block;
+    text-align: right;
+    width: 400px;
 }
 
 /*items.create*/
