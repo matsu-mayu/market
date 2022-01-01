@@ -40,6 +40,8 @@
 }
 
 h1 {
+    width: 800px;
+    margin: auto;
     padding: 10px 10px 10px 10px;
     color: #010101;
     background: white;
@@ -54,10 +56,14 @@ h1 {
 }
 
 h2 {
+    width: 800px;
+    margin: auto;
     padding: 10px 10px 10px 30px;
     color: #010101;
     background: white;
     border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
 }
 .error {
     color: red;
@@ -311,7 +317,3 @@ h2 {
 
 
 /* users */
-.users_title {
-    width: 800px;
-    margin: auto;
-}
