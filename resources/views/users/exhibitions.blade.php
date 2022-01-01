@@ -2,7 +2,7 @@
  
 @section('content')
   <div class="content">
-  <h1>{{ $title }}</h1>
+  <h1 class="users_title">{{ $title }}</h1>
   <a href="{{ route('items.create') }}" class="button_create">出品する</a>
   <ul class="list_none">
       <li>
