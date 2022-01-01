@@ -38,7 +38,6 @@ class ItemController extends Controller
         
         $query = Item::query();
         return view('items.index', [
-            'title' => '商品一覧',
             'items' => $items,
             'categories' => Category::all(),
             'shapes' => Shape::all(),
@@ -193,6 +192,7 @@ class ItemController extends Controller
     public function confirm($id) {
         $item = Item::find($id);
         return view('items.confirm', [
+            'title' => '購入確認画面',
             'item' => $item,
         ]);
     }
