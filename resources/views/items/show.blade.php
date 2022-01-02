@@ -3,7 +3,7 @@
 @section('title', $title)
  
 @section('content')
-  <div class="content">
+  <div class="content_short">
   <h1>{{ $title }}</h1>
     <div class="items_border Index">
       <div class="items_exhimg">
@@ -60,7 +60,7 @@
               価格
             </dt>
               <dd>
-                {{ $item->price }}
+                {{ number_format($item->price) }}
               </dd>
             <dt>
               説明

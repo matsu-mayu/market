@@ -41,7 +41,7 @@
 
 .content_short {
     background-color: #EFF9F4;
-    width: 800px;
+    width: 950px;
     margin: 10px auto 20px auto;
     font-family: monospace;
 }
@@ -308,7 +308,6 @@ dd {
     flex-basis: 30%;
     text-align: center;
     background-color: #ffffff;
-    /* margin: 10px; */
     padding: 10px;
 }
 
