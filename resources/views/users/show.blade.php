@@ -1,7 +1,7 @@
 @extends('layouts.logged_in')
 
 @section('content')
-  <div class="content">
+  <div class="content_short">
     <h1 class="users_title">{{ $title }}</h1>
         <ul class="Index">
             <li class="profile_flex">
