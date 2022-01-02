@@ -39,6 +39,13 @@
     font-family: monospace;
 }
 
+.content_short {
+    background-color: #EFF9F4;
+    width: 800px;
+    margin: 10px auto 20px auto;
+    font-family: monospace;
+}
+
 h1 {
     margin: 0px auto 10px auto;
     padding: 10px 10px 10px 10px;
@@ -82,7 +89,7 @@ dt {
     font-size: 15px;
     font-weight: bold;
     border-bottom: solid 1px #010101;
-    width: 100px;
+    width: 120px;
     margin: 0px auto 10px auto;
 }
 
@@ -318,6 +325,15 @@ dd {
 .items_exhimg {
     width: 600px;
     margin: 20px auto 20px auto;
+}
+
+
+
+
+/* edit */
+.edit_label {
+    width: 192px;
+    padding: 5px;
 }
 
 

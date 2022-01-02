@@ -1,7 +1,7 @@
 @extends('layouts.logged_in')
 
 @section('content')
-  <div class="content">
+  <div class="content_short">
     <h1>{{ $title }}</h1>
     <form method="POST" action="{{ route('profile.update', $user) }}">
         @csrf
