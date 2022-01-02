@@ -6,7 +6,7 @@
   <div class="content">
   <h1>{{ $title }}</h1>
     <div class="items_border Index">
-      <div class="items_img">
+      <div class="items_exhimg">
         <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
       </div>  
       <dl>
@@ -17,7 +17,7 @@
               {{ $item->name }}
             </dd>
         <div class="items_flex">
-          <div class="items_info"?>
+          <div class="items_info">
             <dt>
               カテゴリ
             </dt>
