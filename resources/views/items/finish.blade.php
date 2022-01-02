@@ -60,7 +60,7 @@
                 価格
               </dt>
                 <dd>
-                  {{ $item->price }}
+                  {{ number_format($item->price) }}
                 </dd>
               <dt>
                 説明

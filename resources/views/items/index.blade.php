@@ -112,7 +112,7 @@
         <li class="items_border items_margin">
             <div>
               <a href="{{ route('items.show', $item) }}" enctype="multipart/form-data">
-                <img class="item_img" enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
+                <img class="items_img" enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
               </a>
             </div>
             <div class="button">
@@ -143,7 +143,7 @@
                     <dt>カラー</dt>
                       <dd>{{ $item->color->name }}</dd>
                     <dt>価格</dt>
-                      <dd>{{ $item->price }}円</dd>
+                      <dd>{{ number_format($item->price) }}円</dd>
                   </div>
               </dl>
             </div>
