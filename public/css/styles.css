@@ -295,7 +295,8 @@ dd {
 
 .size_standard {
     width: 600px;
-    margin: auto;
+    margin: 30px auto 10px auto;
+    font-weight: bold;
 }
 
 #modal_shape {

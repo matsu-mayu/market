@@ -37,11 +37,11 @@
             <div>
               <label class="items_label">
                 シェイプ
-                <div id="modal_shape">
+                <!-- <div id="modal_shape">
                     <p class="modal_title">≪シェイプとは？≫</p>
                       <p>メガネの形を表します。</p>
                   </div>
-                  <a class="modal-visible-link" href="#modal_shape"><img class="modal_icon" src="/images/question.png"></a>
+                  <a class="modal-visible-link" href="#modal_shape"><img class="modal_icon" src="/images/question.png"></a> -->
                   ：
                   <select name="shape_id">
                     <option value="">選択してください</option>
@@ -94,7 +94,7 @@
                         <img class="size_img" src="/images/size1.png" alt="size">
                       </div>
                     </div> 
-                    <p class="size_standard">サイズの目安は、 ～48がSサイズ / ～54がMサイズ / それ以上がLサイズ です。</p>
+                    <p class="size_standard">サイズの目安は、 ～48=Sサイズ / ～54=Mサイズ / ～58=Lサイズ です。</p>
                 </div>
                   <a class="modal-visible-link" href="#modal_size"><img class="modal_icon" src="/images/question.png"></a>：
                   <select name="size_id">
