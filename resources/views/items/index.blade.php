@@ -57,7 +57,17 @@
                 リムタイプ
                 <div id="modal_rim">
                     <p class="modal_title">≪リムタイプとは？≫</p>
-                      <p>縁（フチ）のタイプを表します。</p>
+                      <p>レンズを囲んでいる部分をリムと呼び、その種類を表したものがリムタイプです。</p>
+                    <div class="rim_exp">
+                      <p class="rim_standard">フルリム</p>
+                      <p class="rim_standardp">レンズが全てリムに囲まれているフレーム</p>
+                      <p class="rim_standard">ハーフリム</p>
+                      <p class="rim_standardp">レンズの上半分だけがリムで囲まれているフレーム</p>
+                      <p class="rim_standard">アンダーリム</p>
+                      <p class="rim_standardp">レンズの下半分だけがリムで囲まれているフレーム</p>
+                      <p class="rim_standard">フローティング</p>
+                      <p class="rim_standardp">レンズが全くリムに囲まれていないフレーム</p>
+                    </div>
                   </div>
                   <a class="modal-visible-link" href="#modal_rim"><img class="modal_icon" src="/images/question.png"></a>
                   ：
@@ -74,18 +84,17 @@
                 サイズ
                 <div id="modal_size">
                   <p class="modal_title">≪サイズの見方≫</p>
-                    <p>テンプル（柄の部分）に記載されたサイズをご確認ください。</p>
+                    <p>テンプル（柄の部分）の内側に記載されたサイズをご確認ください。</p>
                     <div class="content_center">
                       <div>
                         <img class="size_img" src="/images/size.png" alt="size">
+                        <p class="size_exp">52 -  レンズ横幅</br>18 -  ブリッジ幅</br>140 - テンプルの長さ</p>
                       </div>
                       <div>
                         <img class="size_img" src="/images/size1.png" alt="size">
                       </div>
                     </div> 
-                    <div class="size_exp">
-                      52-レンズ横幅</br>18-ブリッジ幅</br>140-テンプルの長さ 
-                    </div>
+                    <p class="size_standard">サイズの目安は、 ～48がSサイズ / ～54がMサイズ / それ以上がLサイズ です。</p>
                 </div>
                   <a class="modal-visible-link" href="#modal_size"><img class="modal_icon" src="/images/question.png"></a>：
                   <select name="size_id">

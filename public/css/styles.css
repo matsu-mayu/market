@@ -268,16 +268,34 @@ dd {
     margin-top: 10px;
 }
 
+.rim_exp {
+    width: 450px;
+    margin: 35px auto 10px auto;
+}
+
+.rim_standard {
+    font-weight: bold;
+}
+
+.rim_standardp {
+    margin-left: 60px;
+}
+
 .size_img {
     align-items: center;
 }
 
 .size_exp {
-    margin:  auto;
+    padding-left:  30px;
 }
 
 .size-exp p {
     margin-left: 50px;;
+}
+
+.size_standard {
+    width: 600px;
+    margin: auto;
 }
 
 #modal_shape {
