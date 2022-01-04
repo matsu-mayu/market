@@ -30,7 +30,7 @@
             @forelse($orders as $order)
                 <li>
                     <div>
-                        <a href="{{ route('items.show', $order->item) }}">{{ $order->item->name }}</a>：{{ $order->item->price }}円
+                        <a href="{{ route('items.show', $order->item) }}">{{ $order->item->name }}</a>：{{ number_format($order->item->price) }}円
                         出品者 {{ $order->item->user->name }}さん
                     </div>
                 </li>

@@ -60,7 +60,7 @@
               価格
             </dt>
               <dd>
-                {{ number_format($item->price) }}
+                {{ number_format($item->price) }}円
               </dd>
             <dt>
               説明
@@ -75,7 +75,7 @@
     <div class="Index">
         <form action="{{ route('items.confirm', $item) }}">
         @if( $item->orders()->count() >= 1 )
-          <p>売り切れ</p>
+          <p class="sold">売り切れ</p>
         @else
           <input type="submit" value="購入する" class="button buy_button">
         @endif

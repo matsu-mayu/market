@@ -3,10 +3,10 @@
 @section('title', $title)
  
 @section('content')
-  <div class="content">
+  <div class="content_short">
     <h1>{{ $title }}</h1>
       <div class="Index items_border">
-        <div class="items_img">
+        <div class="items_exhimg">
           <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
         </div>  
         <dl>
@@ -60,7 +60,7 @@
                 価格
               </dt>
                 <dd>
-                  {{ number_format($item->price) }}
+                  {{ number_format($item->price) }}円
                 </dd>
               <dt>
                 説明

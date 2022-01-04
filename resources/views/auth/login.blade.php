@@ -4,7 +4,7 @@
     <div class="auth_content">
         <h1 class="auth_h1">ログイン</h1>
         
-            <div class="login">
+            <div class="content_center">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                         <div>
