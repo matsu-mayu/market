@@ -72,10 +72,12 @@ h2 {
 }
 .error {
     color: red;
+    margin-left: 30px;
 }
 
 .success {
     color: green;
+    margin-left: 30px;
 }
 
 .Index {
@@ -99,6 +101,7 @@ dd {
 
 
 
+
 /*login*/
 .auth_content {
     width: 500px;
@@ -113,7 +116,7 @@ dd {
     font-size: 30px;
 }
 
-.login {
+.content_center {
     display: flex;
     justify-content: center;
 }
@@ -145,6 +148,15 @@ dd {
     color         : #ffffff;     /* 背景色     */
     background    : #3ad240;     /* 文字色     */
 }
+
+.button_label {
+    display: inline-block;
+    text-align: right;
+    width: 350px;
+    margin: 10px 0px 5px 0px;
+}
+
+
 
 /*register*/
 .register {
@@ -256,6 +268,37 @@ dd {
     margin-top: 10px;
 }
 
+.rim_exp {
+    width: 450px;
+    margin: 35px auto 10px auto;
+}
+
+.rim_standard {
+    font-weight: bold;
+}
+
+.rim_standardp {
+    margin-left: 60px;
+}
+
+.size_img {
+    align-items: center;
+}
+
+.size_exp {
+    padding-left:  30px;
+}
+
+.size-exp p {
+    margin-left: 50px;;
+}
+
+.size_standard {
+    width: 600px;
+    margin: 30px auto 10px auto;
+    font-weight: bold;
+}
+
 #modal_shape {
     display: none;
 }
@@ -277,6 +320,8 @@ dd {
 }
 
 
+
+
 /* items.show */
 .items_name {
     font-size: 20px;
@@ -290,6 +335,21 @@ dd {
 .buy_button {
     font-size: 20px;
     margin-top: 15px;
+}
+
+.sold {
+    margin-top: 10px;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/* items.create */
+.form_margin {
+    margin: auto;
 }
 
 
@@ -317,6 +377,10 @@ dd {
     margin-bottom: 10px;
 }
 
+.sold_sell.sold {
+    color: red;
+}
+
 .delete_button {
     margin-top: 15px;
 }
@@ -335,12 +399,40 @@ dd {
     padding: 5px;
 }
 
+.current_img {
+    font-size: 18px;
+}
+
+.new_img {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.select_newimg {
+    margin-top: 10px auto 10px auto;
+}
+
+.edit_button {
+    display: inline-block;
+    text-align: right;
+    width: 400px;
+    margin: 10px 0px 5px 0px;
+}
+
+.edit_img {
+    width: 400px;
+    margin: 5px auto 20px auto;
+}
 
 
 
 /*like.index*/
 .like_button {
   cursor: pointer;
+}
+
+.like_button.liked {
+    color: yellow!important;
 }
 
 .like {

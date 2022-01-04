@@ -34,7 +34,7 @@
                         </label>
                     </div>
                     
-                    <div>
+                    <div class="register_label">
                         <input type="submit" value="登録" class="button">
                     </div>
                 </form>
