@@ -39,7 +39,15 @@
     font-family: monospace;
 }
 
+.content_short {
+    background-color: #EFF9F4;
+    width: 950px;
+    margin: 10px auto 20px auto;
+    font-family: monospace;
+}
+
 h1 {
+    margin: 0px auto 10px auto;
     padding: 10px 10px 10px 10px;
     color: #010101;
     background: white;
@@ -54,10 +62,13 @@ h1 {
 }
 
 h2 {
+    margin: auto;
     padding: 10px 10px 10px 30px;
     color: #010101;
     background: white;
     border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
 }
 .error {
     color: red;
@@ -70,17 +81,48 @@ h2 {
 .Index {
     list-style: none;
     text-align: center;
+    width: 800px;
+    margin: auto;
+}
+
+dt {
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: solid 1px #010101;
+    width: 120px;
+    margin: 0px auto 10px auto;
+}
+
+dd {
+    margin-bottom: 10px;
 }
 
 
 
 /*login*/
-.login {
-    margin: 20px;
+.auth_content {
+    width: 500px;
+    margin: auto;
 }
 
-.login input {
-    margin: 5px;
+.auth_h1 {
+    color: #010101;
+    background: white;
+    border-bottom: solid 3px rgb(58, 210, 64);
+    font-family: monospace;
+    font-size: 30px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+
+.login_label {
+    display: inline-block;
+    text-align: right;
+    width: 350px;
+    margin: 10px 0px 5px 0px;
 }
 
 .button {
@@ -96,7 +138,6 @@ h2 {
     transition    : .3s;         /* なめらか変化 */
     box-shadow    : 3px 3px 3px #666666;  /* 影の設定 */
     border        : 2px solid rgb(58, 210, 64);    /* 枠の指定 */
-    margin: 10px 0px 10px 0px;
 }
 
 .button:hover {
@@ -105,20 +146,26 @@ h2 {
     background    : #3ad240;     /* 文字色     */
 }
 
+/*register*/
 .register {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/*register*/
 .register input {
     margin: 5px;
 }
 
+.register_label {
+    display: inline-block;
+    text-align: right;
+    width: 400px;
+}
 
 /*items.create*/
 .button_create {
     width: 150px;
-    margin: 25px 5px 25px 30px;
+    margin: 25px 5px 25px 5px;
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
     font-size     : 17pt;        /* 文字サイズ */
@@ -142,18 +189,22 @@ h2 {
 
 
 /*items.index*/
+.items_margin {
+    margin: 10px;
+}
+
 .search_box {
     display: flex;
     justify-content: center;
 }
 
 .create_box {
-    margin: 80px 20px 20px 20px;
+    margin: 80px 10px 20px 10px;
 }
 
 .search {
-    padding: 0.5em 1em;
-    margin: 20px 10px 20px 10px;
+    padding: 3px;
+    margin: 20px 5px 20px 5px;
     color: black;/*文字色*/
     background: #FFF;
     border: solid 3px rgb(58, 210, 64);/*線*/
@@ -167,8 +218,16 @@ h2 {
     justify-content: space-around;
 }
 
-.spacer {
-  width: 100%;
+.items_label {
+    display: inline-block;
+    text-align: right;
+    width: 325px;
+}
+
+.items_info {
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
 }
 
 .search p {
@@ -188,6 +247,13 @@ h2 {
 .no_items {
     font-weight: 700;
     font-size: 20px;
+}
+
+.items_flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 #modal_shape {
@@ -211,6 +277,22 @@ h2 {
 }
 
 
+/* items.show */
+.items_name {
+    font-size: 20px;
+}
+
+.items_img {
+    width: 400px;
+    margin: 20px auto 20px auto;
+}
+
+.buy_button {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
 /*exhibitions*/
 .index_flex {
     list-style: none;
@@ -219,25 +301,39 @@ h2 {
     justify-content: center;
 }
 
-.item_border {
+.items_border {
     list-style: none;
     border: solid 3px rgb(58, 210, 64);/*線*/
     border-radius: 10px;/*角の丸み*/
     flex-basis: 30%;
     text-align: center;
-    margin: 10px;
+    background-color: #ffffff;
     padding: 10px;
-}
-
-.item_img {
-    width: 400px;
 }
 
 .sold_sell {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
+.delete_button {
+    margin-top: 15px;
+}
+
+.items_exhimg {
+    width: 600px;
+    margin: 20px auto 20px auto;
+}
+
+
+
+
+/* edit */
+.edit_label {
+    width: 192px;
+    padding: 5px;
+}
 
 
 
@@ -273,5 +369,17 @@ h2 {
 
 /*profile*/
 .user_img img {
-    max-width: 350px;
+    max-width: 400px;
+    margin: 15px 0px 5px 0px;
+}
+
+.profile_flex {
+    display: flex;
+    justify-content: center;
+}
+
+.profile_info {
+    width: 200px;
+    margin: 20px 10px 20px 10px;
+    padding: 15px;
 }
