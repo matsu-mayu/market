@@ -99,6 +99,7 @@ dd {
 
 
 
+
 /*login*/
 .auth_content {
     width: 500px;
@@ -145,6 +146,9 @@ dd {
     color         : #ffffff;     /* 背景色     */
     background    : #3ad240;     /* 文字色     */
 }
+
+
+
 
 /*register*/
 .register {

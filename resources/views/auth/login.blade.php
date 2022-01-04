@@ -19,8 +19,11 @@
                                 <input type="password" name="password">
                             </label>
                         </div>
-                        <input type="submit" value="ログイン" class="button">
+                        <div class="login_label">
+                            <input type="submit" value="ログイン" class="button">
+                        </div> 
                 </form>
             </div>
+             
     </div>
 @endsection
