@@ -82,7 +82,7 @@
                                     </select>      
                             </label>          
                         </div>
-                        <div class="button_label">
+                        <div class="items_label">
                             <input type="submit" value="出品" class="button">
                         </div>
                     </form>

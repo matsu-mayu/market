@@ -9,15 +9,15 @@
                     @if($item->image !== '')
                         <img src="{{ \Storage::url($item->image) }}" class="edit_img">
                     @else
-                        画像はありません。
+                        <p>画像はありません。</p>
                     @endif
                 <form method="POST" action="{{ route('items.update_image', $item) }}" enctype="multipart/form-data">
                     @csrf
                     @method('patch')
                         <div>
                             <label class="new_img">
-                                [ 画像を選択 ]</br>
-                                <input type="file" name="image" class="select_newimg">
+                                <p class="select_newimg">[ 画像を選択 ]</p>
+                                <input type="file" name="image">
                             </label>
                         </div>
                         <div class="edit_button">

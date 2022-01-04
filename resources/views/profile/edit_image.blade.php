@@ -16,7 +16,7 @@
                     @method('patch')
                         <div>
                             <label class="new_img">
-                                [ 画像を選択 ]</br>
+                                <p class="select_newimg">[ 画像を選択 ]</p>
                                 <input type="file" name="image">
                             </label>
                         </div>
