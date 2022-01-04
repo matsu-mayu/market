@@ -137,7 +137,9 @@
             </div>
             <div class="button">
               お気に入りに追加：
-                <a class="like_button">{{ $item->isLikedBy(Auth::user()) ? '★　' : '☆　' }}</a>
+                <a class="like_button {{ $item->isLikedBy(Auth::user()) ? 'liked' : '' }}">
+                  {{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}
+                </a>
                 <form method="POST" class="like" action="{{ route('items.toggle_like', $item) }}">
                   @csrf
                   @method('patch')
@@ -167,7 +169,7 @@
                   </div>
               </dl>
             </div>
-            <div class="sold_sell">
+            <div class="sold_sell {{ $item->isSold() ? 'sold' : '' }}">
               {{ $item->isSold() ? '売り切れ' : '販売中' }}
             </div>
         </li>

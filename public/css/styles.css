@@ -377,6 +377,10 @@ dd {
     margin-bottom: 10px;
 }
 
+.sold_sell.sold {
+    color: red;
+}
+
 .delete_button {
     margin-top: 15px;
 }
@@ -425,6 +429,10 @@ dd {
 /*like.index*/
 .like_button {
   cursor: pointer;
+}
+
+.like_button.liked {
+    color: yellow!important;
 }
 
 .like {

@@ -73,12 +73,12 @@
       </dl>
     </div>
     <div class="Index">
-        <form action="{{ route('items.confirm', $item) }}">
         @if( $item->orders()->count() >= 1 )
           <p class="sold">売り切れ</p>
-        @else
-          <input type="submit" value="購入する" class="button buy_button">
+        @elseif( $item->user_id != \Auth::user()->id)
+          <form action="{{ route('items.confirm', $item) }}">
+            <input type="submit" value="購入する" class="button buy_button">
+          </form>
         @endif
-        </form>
     </div>
 @endsection
