@@ -73,9 +73,20 @@
               <label class="items_label">
                 サイズ
                 <div id="modal_size">
-                    <p class="modal_title">≪サイズの見方≫</p>
-                      <p>テンプル（柄の部分）に記載されたサイズをご確認ください。</p>
-                  </div>
+                  <p class="modal_title">≪サイズの見方≫</p>
+                    <p>テンプル（柄の部分）に記載されたサイズをご確認ください。</p>
+                    <div class="content_center">
+                      <div>
+                        <img class="size_img" src="/images/size.png" alt="size">
+                      </div>
+                      <div>
+                        <img class="size_img" src="/images/size1.png" alt="size">
+                      </div>
+                    </div> 
+                    <div class="size_exp">
+                      52-レンズ横幅</br>18-ブリッジ幅</br>140-テンプルの長さ 
+                    </div>
+                </div>
                   <a class="modal-visible-link" href="#modal_size"><img class="modal_icon" src="/images/question.png"></a>：
                   <select name="size_id">
                     <option value="">選択してください</option>
