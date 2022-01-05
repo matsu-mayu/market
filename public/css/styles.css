@@ -337,7 +337,7 @@ dd {
     margin-top: 15px;
 }
 
-.sold {
+.soldout {
     margin-top: 10px;
     color: red;
     font-size: 20px;
@@ -432,11 +432,12 @@ dd {
 }
 
 .like_button.liked {
-    color: yellow!important;
+    color: #ffc40c!important;
 }
 
 .like {
   display: inline;
+  padding-right: 10px;
 }
 
 .like_post {
