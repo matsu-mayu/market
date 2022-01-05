@@ -74,7 +74,7 @@
     </div>
     <div class="Index">
         @if( $item->orders()->count() >= 1 )
-          <p class="sold">売り切れ</p>
+          <p class="soldout">売り切れ</p>
         @elseif( $item->user_id != \Auth::user()->id)
           <form action="{{ route('items.confirm', $item) }}">
             <input type="submit" value="購入する" class="button buy_button">

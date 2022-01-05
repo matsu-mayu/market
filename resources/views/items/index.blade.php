@@ -59,13 +59,13 @@
                     <p class="modal_title">≪リムタイプとは？≫</p>
                       <p>レンズを囲んでいる部分をリムと呼び、その種類を表したものがリムタイプです。</p>
                     <div class="rim_exp">
-                      <p class="rim_standard">フルリム</p>
+                      <p class="rim_standard">【フルリム】</p>
                       <p class="rim_standardp">レンズが全てリムに囲まれているフレーム</p>
-                      <p class="rim_standard">ハーフリム</p>
+                      <p class="rim_standard">【ハーフリム】</p>
                       <p class="rim_standardp">レンズの上半分だけがリムで囲まれているフレーム</p>
-                      <p class="rim_standard">アンダーリム</p>
+                      <p class="rim_standard">【アンダーリム】</p>
                       <p class="rim_standardp">レンズの下半分だけがリムで囲まれているフレーム</p>
-                      <p class="rim_standard">フローティング</p>
+                      <p class="rim_standard">【フローティング】</p>
                       <p class="rim_standardp">レンズが全くリムに囲まれていないフレーム</p>
                     </div>
                   </div>
