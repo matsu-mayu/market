@@ -14,6 +14,19 @@
               </a>
             </div>
 
+            <div class="button">
+              <a>
+                お気に入りから削除：
+                  <p class="like_button {{ $like_item->isLikedBy(Auth::user()) ? 'liked' : '' }}">
+                      {{ $like_item->isLikedBy(Auth::user()) ? '★' : '☆' }}
+                  </p>  
+              </a>
+              <form method="POST" action="{{ route('items.toggle_like', $like_item) }}">
+                @csrf
+                @method('patch')
+              </form>
+            </div>
+
             <div>
               <dl class="items_flex">
                 <div class="items_info">
@@ -41,17 +54,6 @@
 
             <div class="sold_sell">
               {{ $like_item->isSold() ? '売り切れ' : '販売中' }}
-            </div>
-
-            <div class="button">
-              お気に入りから削除：
-                <a class="like_button {{ $like_item->isLikedBy(Auth::user()) ? 'liked' : '' }}">
-                  {{ $like_item->isLikedBy(Auth::user()) ? '★' : '☆' }}
-                </a>
-                <form method="POST" class="like" action="{{ route('items.toggle_like', $like_item) }}">
-                  @csrf
-                  @method('patch')
-                </form>
             </div>
 
           </div>

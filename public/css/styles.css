@@ -405,6 +405,13 @@ dd {
 
 .like_button.liked {
     color: #ffc40c!important;
+    margin: 0px;
+    display: inline;
+}
+
+.like_button.not_liked {
+    margin: 0px;
+    display: inline;
 }
 
 .like {
