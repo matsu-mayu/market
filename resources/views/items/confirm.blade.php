@@ -3,10 +3,13 @@
 @section('content')
 <div>
   <h1>{{ $title }}</h1>
+
     <div class="Index items_border">
+
       <div class="items_exhimg">
         <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
       </div>  
+      
       <div>
         <dl>
           <dt class="items_name">商品名</dt>

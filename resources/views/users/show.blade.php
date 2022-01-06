@@ -1,6 +1,7 @@
 @extends('layouts.logged_in')
 
 @section('content')
+<div>
     <h1>{{ $title }}</h1>
         <div>
             <ul class="Index">
@@ -37,31 +38,35 @@
                                 <img class="items_img" enctype="multipart/form-data" src="{{ asset('storage/' .$order->item->image) }}">
                                 </a>
                             </div>
+                            <div>
                                 <dl class="items_flex">
-                                <div class="items_info">
-                                    <dt>商品名</dt>
-                                    <dd>{{ $order->item->name }}</dd>
-                                    <dt>カテゴリー</dt>
-                                    <dd>{{ $order->item->category->name }}</dd>
-                                    <dt>性別</dt>
-                                    <dd>{{ $order->item->gender->name }}</dd>
-                                    <dt>シェイプ</dt>
-                                    <dd>{{ $order->item->shape->name }}</dd>
-                                </div>
-                                <div class="items_info">
-                                    <dt>リムタイプ</dt>
-                                    <dd>{{ $order->item->rim->name }}</dd>
-                                    <dt>サイズ</dt>
-                                    <dd>{{ $order->item->size->name }}</dd>
-                                    <dt>カラー</dt>
-                                    <dd>{{ $order->item->color->name }}</dd>
-                                    <dt>価格</dt>
-                                    <dd>{{ number_format($order->item->price) }}円</dd>
-                                </div>
+                                    <div class="items_info">
+                                        <dt>商品名</dt>
+                                            <dd>{{ $order->item->name }}</dd>
+                                        <dt>カテゴリー</dt>
+                                            <dd>{{ $order->item->category->name }}</dd>
+                                        <dt>性別</dt>
+                                            <dd>{{ $order->item->gender->name }}</dd>
+                                        <dt>シェイプ</dt>
+                                            <dd>{{ $order->item->shape->name }}</dd>
+                                    </div>
+                                    <div class="items_info">
+                                        <dt>リムタイプ</dt>
+                                            <dd>{{ $order->item->rim->name }}</dd>
+                                        <dt>サイズ</dt>
+                                            <dd>{{ $order->item->size->name }}</dd>
+                                        <dt>カラー</dt>
+                                            <dd>{{ $order->item->color->name }}</dd>
+                                        <dt>価格</dt>
+                                            <dd>{{ number_format($order->item->price) }}円</dd>
+                                    </div>
+                                </dl>
+                            </div>
                         </li>
                     @empty
                         <li>購入履歴はありません。</li>
                     @endforelse
                 </ul>
         </div>
+</div>
 @endsection

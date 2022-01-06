@@ -1,6 +1,7 @@
 @extends('layouts.logged_in')
  
 @section('content')
+<div>
     <h1>{{ $title }}</h1>
         <div>
             <ul class="index_flex">
@@ -12,6 +13,7 @@
                                     <img enctype="multipart/form-data" src="{{ asset('storage/' .$item->image) }}">
                                 </a>
                             </div>
+                            <div>
                                 <dl class="items_flex">
                                     <div class="items_info">
                                         <dt>商品名</dt>
@@ -34,11 +36,13 @@
                                             <dd>{{ number_format($item->price) }}円</dd>
                                     </div>
                                 </dl>
+                            </div>
                                 
-                                <div class="sold_sell">
-                                    {{ $item->isSold() ? '売り切れ' : '販売中' }}
-                                </div>
+                            <div class="sold_sell">
+                                {{ $item->isSold() ? '売り切れ' : '販売中' }}
+                            </div>
 
+                            <div>
                                 [<a href="{{ route('items.edit', $item) }}">編集</a>]
                                 [<a href="{{ route('items.edit_image', $item) }}">画像を変更</a>]
                             
@@ -48,6 +52,7 @@
                                     <input class="button delete_button" type="submit" value="削除">
                                 </form>
                             </div>
+                        </div>
                 </li>  
                     @empty
                         <li>商品はありません。</li>
@@ -57,4 +62,5 @@
         <div class="button_margin">
             <a href="{{ route('items.create') }}" class="button_create">出品する</a>
         </div>
+</div>
 @endsection

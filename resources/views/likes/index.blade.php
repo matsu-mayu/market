@@ -1,17 +1,20 @@
 @extends('layouts.logged_in')
  
 @section('content')
-<div class="content">
+<div>
   <h1>{{ $title }}</h1>
     <ul class="index_flex">
       <li>
         @forelse($like_items as $like_item)
           <div class="items_border items_margin">
+
             <div class="items_exhimg">
               <a href="{{ route('items.show', $like_item) }}" enctype="multipart/form-data">
                 <img enctype="multipart/form-data" src="{{ asset('storage/' .$like_item->image) }}">
               </a>
             </div>
+
+            <div>
               <dl class="items_flex">
                 <div class="items_info">
                   <dt>商品名</dt>
@@ -34,15 +37,38 @@
                     <dd>{{ number_format($like_item->price) }}</dd>
                 </div>
               </dl>
-          
-              <div class="sold_sell">
-                {{ $like_item->isSold() ? '売り切れ' : '販売中' }}
-              </div>
             </div>
+
+            <div class="sold_sell">
+              {{ $like_item->isSold() ? '売り切れ' : '販売中' }}
+            </div>
+
+            <div class="button">
+              お気に入りから削除：
+                <a class="like_button {{ $like_item->isLikedBy(Auth::user()) ? 'liked' : '' }}">
+                  {{ $like_item->isLikedBy(Auth::user()) ? '★' : '☆' }}
+                </a>
+                <form method="POST" class="like" action="{{ route('items.toggle_like', $like_item) }}">
+                  @csrf
+                  @method('patch')
+                </form>
+            </div>
+
+          </div>
       </li>
         @empty
           <li>お気に入りはありません。</li>
         @endforelse
     </ul>
+</div>
+<div>
+  <script>
+    /* global $ */
+    $('.like_button').on('click', (event) => {
+      $(event.currentTarget).next().submit();
+    })
+      
+    $(".modal-visible-link").modaal();
+  </script>
 </div>
 @endsection

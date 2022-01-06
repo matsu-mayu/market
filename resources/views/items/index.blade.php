@@ -1,7 +1,7 @@
 @extends('layouts.logged_in')
 
 @section('content')
-<div class="search_box">
+<div class="content_center">
   <div class="create_box">
       <a href="{{ route('items.create') }}" class="button_create">出品する</a>
   </div>
@@ -9,8 +9,8 @@
   <div class="search">
     <form method="GET" action="{{route('items.index')}}">
       <p>検索フォーム</p>
-        <div class="search_flex">
 
+        <div class="search_flex">
           <div>
             <label class="items_label">
               カテゴリー：
@@ -187,6 +187,7 @@
     @endforelse
   </ul>
 </div>
+<div>
   <script>
     /* global $ */
     $('.like_button').on('click', (event) => {
@@ -195,4 +196,5 @@
       
     $(".modal-visible-link").modaal();
   </script>
+</div>
 @endsection
