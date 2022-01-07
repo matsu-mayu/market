@@ -1,28 +1,25 @@
 @extends('layouts.logged_in')
  
 @section('content')
-<div class="content_short">
+<div>
   <h1>{{ $title }}</h1>
     <div class="content_center">
       <form method="POST" action="{{ route('items.store') }}" enctype="multipart/form-data">
-          @csrf
+        @csrf
           <div>
               <label class="items_label">
-                  商品名：
-                  <input type="text" name="name">
+                商品名：<input type="text" name="name">
               </label>
           </div>
           <div>
             <label class="items_label">
-                  商品説明：
-                  <input type="text" name="description">
-              </label>
+              商品説明：<input type="text" name="description">
+            </label>
           </div>
           <div>
             <label class="items_label">
-                  価格：
-                  <input type="number" name="price">
-              </label>
+              価格：<input type="number" name="price">
+            </label>
           </div>
           <div>
             <label class="items_label">

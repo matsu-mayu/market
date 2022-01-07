@@ -13,23 +13,22 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  
         <script src="{{ asset('js/modaal.js') }}"></script>
-        
-        
     </head>
+
     <body class="body">
         @yield('header')
         
-        {{-- エラーメッセージを出力 --}}
-        @foreach($errors->all() as $error)
-            <p class="error">{{ $error }}</p>
-        @endforeach
+            {{-- エラーメッセージを出力 --}}
+            @foreach($errors->all() as $error)
+                <p class="error">{{ $error }}</p>
+            @endforeach
         
-        {{-- 成功メッセージ --}}
-        @if (\Session::has('success'))
-            <div class="success">
-                {{\ Session::get('success') }}
-            </div>
-        @endif
+            {{-- 成功メッセージ --}}
+            @if (\Session::has('success'))
+                <div class="success">
+                    {{\ Session::get('success') }}
+                </div>
+            @endif
         
         @yield('content')
     </body>

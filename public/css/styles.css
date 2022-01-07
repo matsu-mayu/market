@@ -33,27 +33,11 @@
     font-family: monospace;
 }
 
-.content {
-    background-color: #EFF9F4;
-    margin: 10px 80px 20px 80px;
-    font-family: monospace;
-}
-
-.content_short {
-    background-color: #EFF9F4;
-    width: 950px;
-    margin: 10px auto 20px auto;
-    font-family: monospace;
-}
-
 h1 {
-    margin: 0px auto 10px auto;
+    text-align: center;
     padding: 10px 10px 10px 10px;
     color: #010101;
-    background: white;
-    border-bottom: solid 3px rgb(58, 210, 64);
     font-family: monospace;
-    font-size: 30px;
 }
 
 .icon_png {
@@ -62,13 +46,11 @@ h1 {
 }
 
 h2 {
-    margin: auto;
-    padding: 10px 10px 10px 30px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
     color: #010101;
-    background: white;
-    border-bottom: solid 3px rgb(58, 210, 64);
     font-family: monospace;
-    font-size: 30px;
 }
 .error {
     color: red;
@@ -103,19 +85,6 @@ dd {
 
 
 /*login*/
-.auth_content {
-    width: 500px;
-    margin: auto;
-}
-
-.auth_h1 {
-    color: #010101;
-    background: white;
-    border-bottom: solid 3px rgb(58, 210, 64);
-    font-family: monospace;
-    font-size: 30px;
-}
-
 .content_center {
     display: flex;
     justify-content: center;
@@ -177,7 +146,6 @@ dd {
 /*items.create*/
 .button_create {
     width: 150px;
-    margin: 25px 5px 25px 5px;
     display       : inline-block;
     border-radius : 5%;          /* 角丸       */
     font-size     : 17pt;        /* 文字サイズ */
@@ -190,6 +158,7 @@ dd {
     transition    : .3s;         /* なめらか変化 */
     box-shadow    : 3px 3px 3px #666666;  /* 影の設定 */
     border        : 2px solid rgb(58, 210, 64);    /* 枠の指定 */
+    margin-bottom: 10px;
 }
 
 .button_create:hover {
@@ -198,6 +167,10 @@ dd {
     background    : #3ad240;     /* 文字色     */
 }
 
+.button_margin {
+    width: 150px;
+    margin: auto;
+}
 
 
 /*items.index*/
@@ -324,7 +297,8 @@ dd {
 
 /* items.show */
 .items_name {
-    font-size: 20px;
+    font-size: 30px;
+    margin: auto;
 }
 
 .items_img {
@@ -369,12 +343,13 @@ dd {
     text-align: center;
     background-color: #ffffff;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .sold_sell {
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .sold_sell.sold {
@@ -429,10 +404,15 @@ dd {
 /*like.index*/
 .like_button {
   cursor: pointer;
+  font-size: 25px;
 }
 
 .like_button.liked {
     color: #ffc40c!important;
+}
+
+.like_button.liked {
+    margin-top: 10px;
 }
 
 .like {
@@ -463,6 +443,7 @@ dd {
 /*profile*/
 .user_img img {
     max-width: 400px;
+    max-height: 400px;
     margin: 15px 0px 5px 0px;
 }
 
@@ -475,4 +456,8 @@ dd {
     width: 200px;
     margin: 20px 10px 20px 10px;
     padding: 15px;
+}
+
+.profile_p {
+    padding: 10px;
 }
