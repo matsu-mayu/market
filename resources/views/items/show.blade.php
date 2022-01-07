@@ -12,9 +12,9 @@
       </div>
       
       <div>
-        <dl>
-          <dt class="items_name">商品名</dt>            
-            <dd class="items_name">{{ $item->name }}</dd>
+        <p class="items_name">{{ $item->name }}</p>
+          <div>
+            <dl>
               <div class="items_flex">
                 <div class="items_info">
                   <dt>カテゴリ</dt>
@@ -37,7 +37,8 @@
                     <dd>{{ $item->description }}</dd>
                 </div>
               </div>
-        </dl>
+            </dl>
+          </div>
       </div>
       
       <div class="Index">

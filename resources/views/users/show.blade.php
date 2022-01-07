@@ -12,7 +12,6 @@
                         @else
                             <img src="{{ asset('images/no_image.png') }}">
                         @endif
-                        <p>[<a href="{{ route('profile.edit_image') }}">画像を変更</a>]</p>
                     </div>
                     <div class="profile_info">
                         <dl>
@@ -20,12 +19,16 @@
                                 <dd>{{ $user->name }}さん</dd>
                             <dt>プロフィール</dt>
                                 <dd>{{ $user->profile }}</dd>
+                            <dt>出品数</dt>
+                                <dd>{{ $user->items()->count() }}</dd>
                         </dl>
-                        <p>出品数：{{ $user->items()->count() }}</p>
-                        <p>[<a href="{{ route('profile.edit') }}">プロフィール編集</a>]</p>
                     </div>
                 </li>
             </ul>
+            <div class="items_flex">
+                <p class="profile_p">[<a href="{{ route('profile.edit_image') }}">画像を変更</a>]</p>
+                <p class="profile_p">[<a href="{{ route('profile.edit') }}">プロフィール編集</a>]</p>
+            </div>
         </div>
     
         <div>
