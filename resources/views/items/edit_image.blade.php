@@ -1,7 +1,7 @@
 @extends('layouts.logged_in')
 
 @section('content')
-<div class="content_short">
+<div>
     <h1>{{ $title }}</h1>
         <div class="content_center">
             <div>
