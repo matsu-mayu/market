@@ -142,42 +142,45 @@
           </a>
         </div>
 
-        <div class="button">
-          <a>
-            お気に入りに追加：
-              <p class="like_button {{ $item->isLikedBy(Auth::user()) ? 'liked' : 'not_liked' }}">
-                {{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}
-              </p>
-          </a>
-          <form method="POST" class="like" action="{{ route('items.toggle_like', $item) }}">
-            @csrf
-            @method('patch')
-          </form>
+        <div>
+          <p class="items_name">{{ $item->name }}</p>
+            <div>
+              <dl>
+                <div class="items_flex">
+                  <div class="items_info">
+                    <dt>カテゴリ</dt>
+                      <dd>{{ $item->category->name }}</dd>
+                    <dt>性別</dt>
+                      <dd>{{ $item->gender->name }}</dd>
+                    <dt>シェイプ</dt>
+                      <dd>{{ $item->shape->name }}</dd>
+                    <dt>リムタイプ</dt>
+                      <dd>{{ $item->rim->name }}</dd>
+                  </div>
+                  <div class="items_info">
+                    <dt>サイズ</dt>
+                      <dd>{{ $item->size->name }}</dd>
+                    <dt>カラー</dt>
+                      <dd>{{ $item->color->name }}</dd>
+                    <dt>価格</dt>
+                      <dd>{{ number_format($item->price) }}円</dd>
+                    <dt>説明</dt>
+                      <dd>{{ $item->description }}</dd>
+                  </div>
+                </div>
+              </dl>
+            </div>
         </div>
 
-        <div>   
-          <dl class="items_flex">
-            <div class="items_info">
-              <dt>商品名</dt>
-                <dd>{{ $item->name }}</dd>
-              <dt>カテゴリー</dt>
-                <dd>{{ $item->category->name }}</dd>
-              <dt>性別</dt>
-                <dd>{{ $item->gender->name }}</dd>
-              <dt>シェイプ</dt>
-                <dd>{{ $item->shape->name }}</dd>
-            </div>
-            <div class="items_info">
-              <dt>リムタイプ</dt>
-                <dd>{{ $item->rim->name }}</dd>
-              <dt>サイズ</dt>
-                <dd>{{ $item->size->name }}</dd>
-              <dt>カラー</dt>
-                <dd>{{ $item->color->name }}</dd>
-              <dt>価格</dt>
-                <dd>{{ number_format($item->price) }}円</dd>
-            </div>
-          </dl>
+        <div>
+          お気に入りに追加
+            <a class="like_button {{ $item->isLikedBy(Auth::user()) ? 'liked' : 'not_liked' }}">
+              {{ $item->isLikedBy(Auth::user()) ? '★' : '☆' }}
+            </a>
+            <form method="POST" action="{{ route('items.toggle_like', $item) }}">
+              @csrf
+              @method('patch')
+            </form>
         </div>
         
         <div class="sold_sell {{ $item->isSold() ? 'sold' : '' }}">

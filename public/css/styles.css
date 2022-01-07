@@ -296,7 +296,8 @@ dd {
 
 /* items.show */
 .items_name {
-    font-size: 20px;
+    font-size: 30px;
+    margin: auto;
 }
 
 .items_img {
@@ -341,12 +342,13 @@ dd {
     text-align: center;
     background-color: #ffffff;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .sold_sell {
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .sold_sell.sold {
@@ -401,17 +403,15 @@ dd {
 /*like.index*/
 .like_button {
   cursor: pointer;
+  font-size: 25px;
 }
 
 .like_button.liked {
     color: #ffc40c!important;
-    margin: 0px;
-    display: inline;
 }
 
-.like_button.not_liked {
-    margin: 0px;
-    display: inline;
+.like_button.liked {
+    margin-top: 10px;
 }
 
 .like {
