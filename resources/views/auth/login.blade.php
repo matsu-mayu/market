@@ -18,10 +18,10 @@
                         <input type="password" name="password">
                     </label>
                 </div>
-                <div class="login_label">
-                    <input type="submit" value="ログイン" class="button">
-                </div> 
         </form>
     </div>
+    <div class="login_button">
+        <input type="submit" value="ログイン" class="button">
+    </div> 
 </div>
 @endsection
