@@ -33,10 +33,10 @@
                             <input type="password" name="password_confirmation">
                         </label>
                     </div>
+                    <div class="login_button">
+                        <input type="submit" value="登録" class="button">
+                    </div>
                 </form>
-        </div>
-        <div class="login_button">
-            <input type="submit" value="登録" class="button">
         </div>
 </div>
 @endsection
