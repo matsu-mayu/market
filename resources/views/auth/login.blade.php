@@ -1,10 +1,10 @@
 @extends('layouts.not_logged_in')
 
 @section('content')
-<div>
+<div class="content_center">
     <h1>ログイン</h1>
     <form method="POST" action="{{ route('login') }}">
-    <div class="content_center">
+    <div>
             @csrf
                 <div>
                     <label class="login_label">
