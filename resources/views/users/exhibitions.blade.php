@@ -1,9 +1,8 @@
 @extends('layouts.logged_in')
  
 @section('content')
-<div>
     <h1>{{ $title }}</h1>
-        <div>
+        <main>
             <ul class="index_flex">
                 <li>
                     @forelse($items as $item)
@@ -58,9 +57,10 @@
                         <li>商品はありません。</li>
                     @endforelse
             </ul>
-        </div>
-        <div class="button_margin">
-            <a href="{{ route('items.create') }}" class="button_create">出品する</a>
-        </div>
-</div>
+        </main>
+        <section>
+            <div class="button_margin">
+                <a href="{{ route('items.create') }}" class="button_create">出品する</a>
+            </div>
+        </section>
 @endsection
