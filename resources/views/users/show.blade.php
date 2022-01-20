@@ -1,37 +1,40 @@
 @extends('layouts.logged_in')
 
 @section('content')
-<div>
     <h1>{{ $title }}</h1>
-        <div>
-            <ul class="Index">
-                <li class="profile_flex">
-                    <div class="user_img">
-                        @if($user->image !== '')
-                            <img src="{{ \Storage::url($user->image) }}">
-                        @else
-                            <img src="{{ asset('images/no_image.png') }}">
-                        @endif
-                    </div>
-                    <div class="profile_info">
-                        <dl>
-                            <dt>ユーザー名</dt>
-                                <dd>{{ $user->name }}さん</dd>
-                            <dt>プロフィール</dt>
-                                <dd>{{ $user->profile }}</dd>
-                            <dt>出品数</dt>
-                                <dd>{{ $user->items()->count() }}</dd>
-                        </dl>
-                    </div>
-                </li>
-            </ul>
-            <div class="items_flex">
-                <p class="profile_p">[<a href="{{ route('profile.edit_image') }}">画像を変更</a>]</p>
-                <p class="profile_p">[<a href="{{ route('profile.edit') }}">プロフィール編集</a>]</p>
-            </div>
-        </div>
+        <main>
+            <article>
+                <ul class="Index">
+                    <li class="profile_flex">
+                        <div class="user_img">
+                            @if($user->image !== '')
+                                <img src="{{ \Storage::url($user->image) }}">
+                            @else
+                                <img src="{{ asset('images/no_image.png') }}">
+                            @endif
+                        </div>
+                        <div class="profile_info">
+                            <dl>
+                                <dt>ユーザー名</dt>
+                                    <dd>{{ $user->name }}さん</dd>
+                                <dt>プロフィール</dt>
+                                    <dd>{{ $user->profile }}</dd>
+                                <dt>出品数</dt>
+                                    <dd>{{ $user->items()->count() }}</dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <section>
+                <div class="items_flex">
+                    <p class="profile_p">[<a href="{{ route('profile.edit_image') }}">画像を変更</a>]</p>
+                    <p class="profile_p">[<a href="{{ route('profile.edit') }}">プロフィール編集</a>]</p>
+                </div>
+            </section>
+        </main>
     
-        <div>
+        <article>
             <h2>購入履歴</h2>
                 <ul class="index_flex">
                     @forelse($orders as $order)
@@ -70,6 +73,5 @@
                         <li>購入履歴はありません。</li>
                     @endforelse
                 </ul>
-        </div>
-</div>
+        </article>
 @endsection
